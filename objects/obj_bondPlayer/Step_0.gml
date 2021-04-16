@@ -198,7 +198,7 @@ else {
 	}
 	// running
 	else {
-		sprite_index = spr_Verdali_Run;
+		sprite_index = spr_Bond_Run;
 	}
 
 }
