@@ -1,5 +1,5 @@
 /// @description Control movement and actions for chaos
-
+global.current_state = PlayerState.Chaos;
 // get input
 key_return = keyboard_check_pressed(ord("R")); // return back to Verdali
 
@@ -16,8 +16,6 @@ if (hDir != 0 || vDir != 0){
 	x += moveX;
 	y += moveY;
 }
-
-global.current_state = PlayerState.Chaos;
 
 // move back to verdali upon key_return press
 if (key_return) {
@@ -57,6 +55,7 @@ if (key_return) {
 // destroy instance once within range
 if (returning) {
 	if (distance_to_object(obj_verdaliPlayer) < destroy_range) {
+		global.current_state = PlayerState.Verdali;
 		instance_destroy();
 	}
 }

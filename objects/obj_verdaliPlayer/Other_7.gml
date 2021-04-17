@@ -6,7 +6,7 @@ if (state == "Roll" && onGround) {
 // changing form, transfer controls to Bond
 if (state == "Transform") {
 	show_debug_message("Attempted form change!");
-	instance_create_layer(x, y, "Instances", obj_bondPlayer);
+	instance_create_layer(x, y, "Player", obj_bondPlayer);
 	instance_destroy(input);
 	instance_destroy();
 }

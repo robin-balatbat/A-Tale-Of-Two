@@ -137,11 +137,10 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		// spawn chaos
 		if (key_spawnChaos && onGround && hsp == 0 && vsp == 0 && !chaosSpawned){
 			show_debug_message("Chaos has appeared!");
-			instance_create_layer(x, y, "Instances", obj_chaosPlayer);
+			instance_create_layer(x, y, "Player", obj_chaosPlayer);
 			chaosSpawned = true;
 		}
 		chaosSpawned = false;
-		global.current_state = PlayerState.Verdali;
 
 		// changing form
 		if (key_changeForm && onGround && hsp == 0 && vsp == 0) {

@@ -9,6 +9,7 @@
     {"id":{"name":"spr_Verdali_Roll","path":"sprites/spr_Verdali_Roll/spr_Verdali_Roll.yy",},"order":4,},
     {"id":{"name":"spr_Verdali_Run","path":"sprites/spr_Verdali_Run/spr_Verdali_Run.yy",},"order":2,},
     {"id":{"name":"obj_verdaliPlayer","path":"objects/obj_verdaliPlayer/obj_verdaliPlayer.yy",},"order":2,},
+    {"id":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},"order":6,},
     {"id":{"name":"spr_Verdali_Air","path":"sprites/spr_Verdali_Air/spr_Verdali_Air.yy",},"order":3,},
     {"id":{"name":"globalVariables","path":"scripts/globalVariables/globalVariables.yy",},"order":0,},
     {"id":{"name":"Main_Menu","path":"sprites/Main_Menu/Main_Menu.yy",},"order":0,},
