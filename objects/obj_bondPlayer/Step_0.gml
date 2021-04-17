@@ -187,7 +187,6 @@ else if (state == "Transform") {
 // on ground
 else {
 	image_speed = 1;
-	show_debug_message(hsp);
 	// idle
 	if (hsp == 0) {
 		sprite_index = spr_Bond_Idle;
