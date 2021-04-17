@@ -159,17 +159,17 @@ if (state == "Move") {
 */
 // jumping animation
 if (!onGround) {
-	//sprite_index = spr_Verdali_Air;
-	//image_speed = 0;
+	sprite_index = spr_Bond_Air;
+	image_speed = 0;
 	
-	//// falling down
-	//if (sign(vsp) > 0) {
-	//	image_index = 1;
-	//}
-	//// jumping up
-	//else {
-	//	image_index = 0;
-	//}
+	// falling down
+	if (sign(vsp) > 0) {
+		image_index = 1;
+	}
+	// jumping up
+	else {
+		image_index = 0;
+	}
 }
 // Rolling animation
 else if (state == "Roll") {

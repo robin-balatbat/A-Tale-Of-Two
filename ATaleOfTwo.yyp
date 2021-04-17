@@ -20,6 +20,7 @@
     {"id":{"name":"spr_testChaos","path":"sprites/spr_testChaos/spr_testChaos.yy",},"order":3,},
     {"id":{"name":"spr_testMagic","path":"sprites/spr_testMagic/spr_testMagic.yy",},"order":4,},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},"order":3,},
+    {"id":{"name":"spr_Bond_Air","path":"sprites/spr_Bond_Air/spr_Bond_Air.yy",},"order":4,},
     {"id":{"name":"getInput","path":"scripts/getInput/getInput.yy",},"order":1,},
     {"id":{"name":"spr_Verdali_Walk","path":"sprites/spr_Verdali_Walk/spr_Verdali_Walk.yy",},"order":1,},
     {"id":{"name":"spr_testWall","path":"sprites/spr_testWall/spr_testWall.yy",},"order":2,},
