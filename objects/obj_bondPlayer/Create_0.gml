@@ -6,7 +6,7 @@ global.current_state = PlayerState.Bond;
 input = instance_create_layer(0, 0, "Instances", obj_input);
 
 // basic movement variables
-moveSpeed = 4;
+moveSpeed = 3.5;
 jumpSpeed = 15;
 
 hsp = 0;
@@ -18,7 +18,7 @@ vsp = 0;
 // variables for dashing
 mvtLocked = 0;
 maxMvtLocked = 10;
-dashSpeed = 4;
+dashSpeed = 10;
 dashDuration = 0;
 maxDashDuration = 10;
 

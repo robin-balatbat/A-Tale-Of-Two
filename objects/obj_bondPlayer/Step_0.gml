@@ -4,6 +4,7 @@
 key_changeForm = keyboard_check_pressed(ord("X"));
 
 if (state == "Move") {
+	#region setup calculations
 	// get direction movement
 	var move_dir = input.key_right - input.key_left;
 
@@ -13,7 +14,9 @@ if (state == "Move") {
 
 	mvtLocked = max(mvtLocked - 1, 0);
 	dashDuration = max(dashDuration - 1, 0);
+	#endregion
 
+	#region dashing
 	if (dashDuration > 0) {
 		vsp = 0;
 	}
@@ -25,11 +28,12 @@ if (state == "Move") {
 	}
 
 	// dashing state
-	if (input.key_dash) {
-		dashDuration = maxDashDuration;
-		hsp += image_xscale * dashSpeed;
+	if (input.key_dash && (onWall == 0)) {
+		state = "Dash";
 	}
+	#endregion
 
+	#region jump buffering calculations
 	// coyote time
 	if (!onGround) {
 		if (coyote_counter > 0) {
@@ -51,7 +55,9 @@ if (state == "Move") {
 	if (input.key_jump) {
 		jumpBuffer = jumpBufMax;
 	}
+	#endregion
 
+	#region horizontal movement
 	// Handles horizontal left and right movement, and jumping movement
 	if (mvtLocked <= 0 && dashDuration <= 0) {
 	
@@ -99,6 +105,7 @@ if (state == "Move") {
 				}
 		
 				if (onWall != 0) {
+					image_xscale = onWall;
 					vsp = -jumpSpeed;
 					hsp = onWall * moveSpeed;
 					mvtLocked = maxMvtLocked;
@@ -108,7 +115,9 @@ if (state == "Move") {
 			}
 		}	
 	}
+	#endregion
 
+	#region collisions
 	// Horizontal Collision
 	if (place_meeting(x + hsp, y, obj_testWall)){
 	
@@ -130,6 +139,9 @@ if (state == "Move") {
 		vsp = 0;
 	}
 	y = y + vsp;
+	#endregion
+	
+	#region change form
 
 	global.current_state = PlayerState.Bond;
 
@@ -139,6 +151,8 @@ if (state == "Move") {
 		state = "Transform"
 		
 	}
+	#endregion
+	
 	#region attacking and magic
 		
 	// magic projectile attack TODO limit attack based on mp
@@ -152,32 +166,36 @@ if (state == "Move") {
 	#endregion
 }
 
-#region animation
+
+#region animations
 // animation states
 /* TODO: Fix collision masks
 	issues when jumping against a wall
 */
+
+// Dashinging animation
+if (state == "Dash") {
+	if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
+		x += image_xscale * dashSpeed;
+		image_speed = 0.6;
+		sprite_index = spr_Bond_Dash;
+	}
+}
 // jumping animation
-if (!onGround) {
+else if (!onGround) {
+	
 	sprite_index = spr_Bond_Air;
 	image_speed = 0;
 	
 	// falling down
 	if (sign(vsp) > 0) {
+		
 		image_index = 1;
 	}
 	// jumping up
 	else {
 		image_index = 0;
 	}
-}
-// Rolling animation
-else if (state == "Roll") {
-	//if (!place_meeting(x + rollSpeed, y, obj_testWall) && !place_meeting(x - rollSpeed, y, obj_testWall)) {
-	//	x += image_xscale * rollSpeed;
-	//	image_speed = 0.6;
-	//	sprite_index = spr_Verdali_Roll;
-	//}
 }
 // transforming
 else if (state == "Transform") {
