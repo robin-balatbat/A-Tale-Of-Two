@@ -91,7 +91,7 @@ if (state == "Move") {
 	
 	
 		// force any extremely low speed to 0
-		if (abs(hsp) <= 0.40) {
+		if (abs(hsp) <= 0.90) {
 			hsp = 0;
 		}
 	
