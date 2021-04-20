@@ -92,7 +92,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		chaosSpawned = false;
 
 		// changing form
-		if (key_changeForm && onGround && hsp == 0 && vsp == 0) {
+		if (key_changeForm) {
 			state = "Transform";
 			
 		}
@@ -107,7 +107,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		#endregion
 		
 		// change to attacking state
-		if (input.key_attack && onGround) {
+		if (input.key_attack) {
 			state = "Attack";
 		}
 		

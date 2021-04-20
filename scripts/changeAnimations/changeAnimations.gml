@@ -9,25 +9,41 @@ function changeAnimations(){
 			// Jumping
 			if (!onGround) {
 				
-				changeSprite(0, spr_Verdali_Air);
-				
-				// falling down
-				if (sign(vsp) > 0) {
-					image_index = 1;
+				// mid-air attacking
+				if (state == "Attack") {
+					vsp = 0;
+					ds_list_clear(hitByAttack);
+					attackScript();
+					mask_index = spr_V_Attack1_Mask;
+					changeSprite(0.6, spr_Verdali_Attack1);
 				}
-				// jumping up
+				// mid-air transform
+				else if (state == "Transform") {
+					vsp = 0;
+					changeSprite(0.7, spr_Verdali_Transform);
+				}
+				// normal jumping
 				else {
-					image_index = 0;
+					changeSprite(0, spr_Verdali_Air);
+				
+					// falling down
+					if (sign(vsp) > 0) {
+						image_index = 1;
+					}
+					// jumping up
+					else {
+						image_index = 0;
 					
+					}
 				}
 				
 			}
-			// attacking
+			// attacking while on ground
 			else if (state == "Attack") {
 				ds_list_clear(hitByAttack);
-				verdali_AttackOne();
+				attackScript();
 				mask_index = spr_V_Attack1_Mask;
-				changeSprite(0.6, spr_Verdali_Attack1);
+				changeSprite(0.7, spr_Verdali_Attack1);
 				
 			}
 			// Rolling animation
@@ -75,6 +91,19 @@ function changeAnimations(){
 				
 				if (onWall != 0) {
 					changeSprite(1, spr_Bond_Wall);
+				}
+				// mid-air attacking
+				else if (state == "Attack") {
+					vsp = 0;
+					ds_list_clear(hitByAttack);
+					attackScript();
+					mask_index = spr_V_Attack1_Mask;
+					changeSprite(0.6, spr_Verdali_Attack1);
+				}
+				// mid-air transform
+				else if (state == "Transform") {
+					vsp = 0;
+					changeSprite(0.7, spr_Bond_Transform);
 				}
 				else {
 					changeSprite(0, spr_Bond_Air);

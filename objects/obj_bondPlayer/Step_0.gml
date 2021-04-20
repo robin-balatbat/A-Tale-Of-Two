@@ -94,7 +94,7 @@ if (state == "Move") {
 	global.current_state = PlayerState.Bond;
 
 	// changing form
-	if (key_changeForm && onGround) {
+	if (key_changeForm) {
 		show_debug_message("Attempted form change!");
 		state = "Transform"
 		
