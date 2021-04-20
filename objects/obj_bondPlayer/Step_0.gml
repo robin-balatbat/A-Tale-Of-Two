@@ -57,7 +57,7 @@ if (state == "Move") {
 	}
 	#endregion
 
-	#region horizontal movement
+	#region horizontal and vertical movement
 	// Handles horizontal left and right movement, and jumping movement
 	if (mvtLocked <= 0 && dashDuration <= 0) {
 	

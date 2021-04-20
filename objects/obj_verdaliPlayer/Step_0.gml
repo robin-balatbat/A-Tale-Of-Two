@@ -1,5 +1,5 @@
 
-
+// Can only move Verdali when chaos is not spawned
 if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 	
 	if (state == "Move") {
@@ -104,12 +104,12 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		if (input.key_magic) {
 			spawnProjectile(4, 20, obj_magic);
 		}
-		#endregion
 		
 		// change to attacking state
 		if (input.key_attack) {
 			state = "Attack";
 		}
+		#endregion
 		
 	}
 	
