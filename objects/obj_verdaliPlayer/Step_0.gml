@@ -93,6 +93,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 
 		// changing form
 		if (key_changeForm) {
+			screenShake(6, 15);
 			state = "Transform";
 			
 		}

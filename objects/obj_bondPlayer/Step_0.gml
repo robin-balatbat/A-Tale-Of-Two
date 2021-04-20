@@ -95,7 +95,7 @@ if (state == "Move") {
 
 	// changing form
 	if (key_changeForm) {
-		show_debug_message("Attempted form change!");
+		screenShake(6, 15);
 		state = "Transform"
 		
 	}
