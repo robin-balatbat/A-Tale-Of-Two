@@ -1,14 +1,18 @@
 /// @description Camera step event
 
-// get current object to follow based on Player's state
-if (global.current_state == PlayerState.Verdali && !instance_exists(obj_chaosPlayer)) {
-	follow = obj_verdaliPlayer;
-}
-else if (global.current_state == PlayerState.Bond) {
-	follow = obj_bondPlayer;
-}
-else if (global.current_state == PlayerState.Chaos) {
-	follow = obj_chaosPlayer;
+switch (global.current_state) {
+	
+	case PlayerState.Verdali:
+		follow = obj_verdaliPlayer;
+		break;
+		
+	case PlayerState.Bond:
+		follow = obj_bondPlayer;
+		break;
+		
+	case PlayerState.Chaos:
+		follow = obj_chaosPlayer;
+		break;
 }
 
 // update destination
