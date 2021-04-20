@@ -29,6 +29,12 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		else {
 			vsp++;
 		}
+		
+		// roll dodging
+		if (input.key_dash && onGround) {
+			image_index = 0;
+			state = "Roll";	
+		}
 
 		// coyote time
 		if (!onGround) {
@@ -70,12 +76,6 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 
 		accelAndDecel();
 		
-		// roll dodging
-		if (input.key_dash && onGround) {
-			image_index = 0;
-			state = "Roll";	
-		}
-		
 		#endregion
 		
 		#region collision
@@ -105,7 +105,8 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 			spawnProjectile(4, 20, obj_magic);
 		}
 		#endregion
-			
+		
+		// change to attacking state
 		if (input.key_attack && onGround) {
 			state = "Attack";
 		}

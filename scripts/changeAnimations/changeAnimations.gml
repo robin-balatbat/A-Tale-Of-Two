@@ -6,11 +6,11 @@ function changeAnimations(){
 		
 		#region Verdali
 		case PlayerState.Verdali:
-			// jumping animation
+			// Jumping
 			if (!onGround) {
-				sprite_index = spr_Verdali_Air;
-				image_speed = 0;
-	
+				
+				changeSprite(0, spr_Verdali_Air);
+				
 				// falling down
 				if (sign(vsp) > 0) {
 					image_index = 1;
@@ -18,43 +18,42 @@ function changeAnimations(){
 				// jumping up
 				else {
 					image_index = 0;
+					
 				}
+				
 			}
-			// Attacking State
+			// attacking
 			else if (state == "Attack") {
 				ds_list_clear(hitByAttack);
 				verdali_AttackOne();
 				mask_index = spr_V_Attack1_Mask;
-				sprite_index = spr_Verdali_Attack1;
-				image_speed = 0.6;
+				changeSprite(0.6, spr_Verdali_Attack1);
+				
 			}
 			// Rolling animation
 			else if (state == "Roll") {
 				if (!place_meeting(x + rollSpeed, y, obj_testWall) && !place_meeting(x - rollSpeed, y, obj_testWall)) {
 					x += image_xscale * rollSpeed;
-					image_speed = 0.6;
-					sprite_index = spr_Verdali_Roll;
+					changeSprite(0.6, spr_Verdali_Roll);
 				}
 			}
 			// transforming
 			else if (state == "Transform") {
-				image_speed = 0.3;
-				sprite_index = spr_Verdali_Transform;
+				changeSprite(0.3, spr_Verdali_Transform);
 			}
 			// on ground
 			else {
-				image_speed = 1;
 				// idle
 				if (hsp == 0) {
-					sprite_index = spr_Verdali;
+					changeSprite(1, spr_Verdali);
 				}
 				// walking
 				else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-					sprite_index = spr_Verdali_Walk;
+					changeSprite(1, spr_Verdali_Walk);
 				}
 				// running
 				else {
-					sprite_index = spr_Verdali_Run;
+					changeSprite(1, spr_Verdali_Run);
 				}
 
 			}
@@ -68,45 +67,47 @@ function changeAnimations(){
 			if (state == "Dash") {
 				if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
 					x += image_xscale * dashSpeed;
-					image_speed = 0.6;
-					sprite_index = spr_Bond_Dash;
+					changeSprite(0.6, spr_Bond_Dash);
 				}
 			}
 			// jumping animation
 			else if (!onGround) {
-	
-				sprite_index = spr_Bond_Air;
-				image_speed = 0;
-	
-				// falling down
-				if (sign(vsp) > 0) {
-		
-					image_index = 1;
+				
+				if (onWall != 0) {
+					changeSprite(1, spr_Bond_Wall);
 				}
-				// jumping up
 				else {
-					image_index = 0;
+					changeSprite(0, spr_Bond_Air);
+	
+					// falling down
+					if (sign(vsp) > 0) {
+						image_index = 1;
+					}
+					// jumping up
+					else {
+						image_index = 0;
+					}
 				}
+	
+				
 			}
 			// transforming
 			else if (state == "Transform") {
-				image_speed = 0.3;
-				sprite_index = spr_Bond_Transform;
+				changeSprite(0.3, spr_Bond_Transform);
 			}
 			// on ground
 			else {
-				image_speed = 1;
 				// idle
 				if (hsp == 0) {
-					sprite_index = spr_Bond_Idle;
+					changeSprite(1, spr_Bond_Idle);
 				}
 				// walking
 				else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-					sprite_index = spr_Bond_Walk;
+					changeSprite(1, spr_Bond_Walk);
 				}
 				// running
 				else {
-					sprite_index = spr_Bond_Run;
+					changeSprite(1, spr_Bond_Run);
 				}
 
 			}

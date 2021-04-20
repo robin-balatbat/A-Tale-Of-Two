@@ -12,7 +12,7 @@ if (state == "Transform") {
 }
 
 if (state == "Attack" && onGround) {
-	mask_index = spr_Verdali;
+	mask_index = spr_Verdali_Mask;
 	state = "Move";
 	image_index = 0;
 }
