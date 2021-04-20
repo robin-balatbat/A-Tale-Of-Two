@@ -20,7 +20,6 @@ mvtLocked = 0;
 maxMvtLocked = 10;
 dashSpeed = 10;
 dashDuration = 0;
-maxDashDuration = 10;
 
 // stores current location on ground or wall
 onGround = 0;

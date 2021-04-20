@@ -118,27 +118,7 @@ if (state == "Move") {
 	#endregion
 
 	#region collisions
-	// Horizontal Collision
-	if (place_meeting(x + hsp, y, obj_testWall)){
-	
-		while (!place_meeting(x + sign(hsp), y, obj_testWall)) {
-			x = x + sign(hsp);
-		}
-	
-		hsp = 0;
-	}
-	x = x + hsp;
-
-	// Vertical Collision
-	if (place_meeting(x, y + vsp, obj_testWall)){
-	
-		while (!place_meeting(x, y  + sign(vsp), obj_testWall)) {
-			y = y + sign(vsp);
-		}
-	
-		vsp = 0;
-	}
-	y = y + vsp;
+	collisions(obj_testWall);
 	#endregion
 	
 	#region change form
@@ -158,65 +138,12 @@ if (state == "Move") {
 	// magic projectile attack TODO limit attack based on mp
 	// TODO: change which obj is spawned
 	if (input.key_magic) {
-		with (instance_create_layer(x + 4, y - 20, "Projectiles", obj_magic)) {
-			image_xscale = other.image_xscale;
-			hspeed = other.projSpeed * image_xscale;
-		}
+		spawnProjectile(4, 20, obj_magic);
 	}
 	#endregion
 }
 
 
 #region animations
-// animation states
-/* TODO: Fix collision masks
-	issues when jumping against a wall
-*/
-
-// Dashinging animation
-if (state == "Dash") {
-	if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
-		x += image_xscale * dashSpeed;
-		image_speed = 0.6;
-		sprite_index = spr_Bond_Dash;
-	}
-}
-// jumping animation
-else if (!onGround) {
-	
-	sprite_index = spr_Bond_Air;
-	image_speed = 0;
-	
-	// falling down
-	if (sign(vsp) > 0) {
-		
-		image_index = 1;
-	}
-	// jumping up
-	else {
-		image_index = 0;
-	}
-}
-// transforming
-else if (state == "Transform") {
-	image_speed = 0.3;
-	sprite_index = spr_Bond_Transform;
-}
-// on ground
-else {
-	image_speed = 1;
-	// idle
-	if (hsp == 0) {
-		sprite_index = spr_Bond_Idle;
-	}
-	// walking
-	else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-		sprite_index = spr_Bond_Walk;
-	}
-	// running
-	else {
-		sprite_index = spr_Bond_Run;
-	}
-
-}
+changeAnimations();
 #endregion

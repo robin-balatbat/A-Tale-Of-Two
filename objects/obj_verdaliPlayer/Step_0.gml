@@ -110,27 +110,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		#endregion
 		
 		#region collision
-		// Horizontal Collision
-		if (place_meeting(x + hsp, y, obj_testWall)){
-	
-			while (!place_meeting(x + sign(hsp), y, obj_testWall)) {
-				x = x + sign(hsp);
-			}
-	
-			hsp = 0;
-		}
-		x = x + hsp;
-
-		// Vertical Collision
-		if (place_meeting(x, y + vsp, obj_testWall)){
-	
-			while (!place_meeting(x, y  + sign(vsp), obj_testWall)) {
-				y = y + sign(vsp);
-			}
-	
-			vsp = 0;
-		}
-		y = y + vsp;
+		collisions(obj_testWall);
 		#endregion
 	
 		#region change form
@@ -153,10 +133,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		
 		// magic projectile attack TODO limit attack based on mp
 		if (input.key_magic) {
-			with (instance_create_layer(x + 4, y - 20, "Projectiles", obj_magic)) {
-				image_xscale = other.image_xscale;
-				hspeed = other.projSpeed * image_xscale;
-			}
+			spawnProjectile(4, 20, obj_magic);
 		}
 		#endregion
 			
@@ -169,60 +146,5 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 }
 
 #region animation
-// animation states
-/* TODO: Fix collision masks
-	issues when jumping against a wall
-*/
-// jumping animation
-if (!onGround) {
-	sprite_index = spr_Verdali_Air;
-	image_speed = 0;
-	
-	// falling down
-	if (sign(vsp) > 0) {
-		image_index = 1;
-	}
-	// jumping up
-	else {
-		image_index = 0;
-	}
-}
-// Attacking State
-else if (state == "Attack") {
-	ds_list_clear(hitByAttack);
-	verdali_AttackOne();
-	mask_index = spr_V_Attack1_Mask;
-	sprite_index = spr_Verdali_Attack1;
-	image_speed = 0.6;
-}
-// Rolling animation
-else if (state == "Roll") {
-	if (!place_meeting(x + rollSpeed, y, obj_testWall) && !place_meeting(x - rollSpeed, y, obj_testWall)) {
-		x += image_xscale * rollSpeed;
-		image_speed = 0.6;
-		sprite_index = spr_Verdali_Roll;
-	}
-}
-// transforming
-else if (state == "Transform") {
-	image_speed = 0.3;
-	sprite_index = spr_Verdali_Transform;
-}
-// on ground
-else {
-	image_speed = 1;
-	// idle
-	if (hsp == 0) {
-		sprite_index = spr_Verdali;
-	}
-	// walking
-	else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-		sprite_index = spr_Verdali_Walk;
-	}
-	// running
-	else {
-		sprite_index = spr_Verdali_Run;
-	}
-
-}
+changeAnimations();
 #endregion
