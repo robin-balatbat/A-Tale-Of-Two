@@ -5,7 +5,10 @@
   },
   "solid": true,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_Verdali_Mask",
+    "path": "sprites/spr_Verdali_Mask/spr_Verdali_Mask.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

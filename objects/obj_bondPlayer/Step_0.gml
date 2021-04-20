@@ -6,7 +6,7 @@ key_changeForm = keyboard_check_pressed(ord("X"));
 if (state == "Move") {
 	#region setup calculations
 	// get direction movement
-	var move_dir = input.key_right - input.key_left;
+	move_dir = input.key_right - input.key_left;
 
 	// check if on wall or ground
 	onGround = place_meeting(x, y + 1, obj_testWall);
@@ -61,39 +61,7 @@ if (state == "Move") {
 	// Handles horizontal left and right movement, and jumping movement
 	if (mvtLocked <= 0 && dashDuration <= 0) {
 	
-		// Handle horizontal acceleration and deceleration
-		if (move_dir != 0) {
-			image_xscale = move_dir;
-		}
-	
-		// Acceleration
-		if ((hsp < max_hsp) && (hsp > -max_hsp)) {
-			hsp += move_dir * moveSpeed;
-		}
-		else if (hsp == max_hsp) {
-			if (!input.key_right) {
-				hsp--;
-			}
-		} else if (hsp == -max_hsp) {
-			if (!input.key_left) {
-				hsp++;
-			}
-		}
-	
-		// Deceleration
-		if ((hsp > 0) && (!input.key_left) && (!input.key_right) && (onGround)) {
-			hsp -= fric_val;
-		}
-	
-		if ((hsp < 0) && (!input.key_left) && (!input.key_right) && (onGround)) {
-			hsp += fric_val;
-		}
-	
-	
-		// force any extremely low speed to 0
-		if (abs(hsp) <= 0.90) {
-			hsp = 0;
-		}
+		accelAndDecel();
 	
 		// handle jump calculations and jump buffering
 		if (jumpBuffer > 0) {
