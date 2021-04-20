@@ -10,3 +10,9 @@ if (state == "Transform") {
 	instance_destroy(input);
 	instance_destroy();
 }
+
+if (state == "Attack" && onGround) {
+	mask_index = spr_Verdali;
+	state = "Move";
+	image_index = 0;
+}

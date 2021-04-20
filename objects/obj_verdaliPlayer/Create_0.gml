@@ -22,7 +22,7 @@ dashDuration = 0;
 
 // rolling variables
 rollSpeed = 3;
-state = "Move"; // keeps track of current state
+state = "Move"; // keeps track of current state, maybe change to enum
 
 // stores current location on ground or wall
 onGround = 0;
@@ -42,3 +42,6 @@ chaosSpawned = false;
 
 // projectile speed
 projSpeed = 25;
+
+// attacking
+hitByAttack = ds_list_create();

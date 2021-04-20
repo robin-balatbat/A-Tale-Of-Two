@@ -18,6 +18,11 @@ function getInput(){
 	// changing form between Verdali and Bond is independent to each object
 
 	// need melee attack and magic attack
+	
+	// magic attack
 	key_magic = keyboard_check_pressed(ord("Q"));
+	
+	// melee attack
+	key_attack = keyboard_check_pressed(ord("F"));
 
 }

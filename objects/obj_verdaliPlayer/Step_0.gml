@@ -1,4 +1,4 @@
-/// @description Bond state movements and key inputs
+
 
 if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 	
@@ -159,6 +159,10 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 			}
 		}
 		#endregion
+			
+		if (input.key_attack && onGround) {
+			state = "Attack";
+		}
 		
 	}
 	
@@ -182,6 +186,14 @@ if (!onGround) {
 	else {
 		image_index = 0;
 	}
+}
+// Attacking State
+else if (state == "Attack") {
+	ds_list_clear(hitByAttack);
+	verdali_AttackOne();
+	mask_index = spr_V_Attack1_Mask;
+	sprite_index = spr_Verdali_Attack1;
+	image_speed = 0.6;
 }
 // Rolling animation
 else if (state == "Roll") {
