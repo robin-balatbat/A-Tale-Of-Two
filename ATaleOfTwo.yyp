@@ -39,6 +39,7 @@
     {"id":{"name":"spr_testMagic","path":"sprites/spr_testMagic/spr_testMagic.yy",},"order":4,},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},"order":3,},
     {"id":{"name":"spr_Bond_Air","path":"sprites/spr_Bond_Air/spr_Bond_Air.yy",},"order":4,},
+    {"id":{"name":"sh_hitFlash","path":"shaders/sh_hitFlash/sh_hitFlash.yy",},"order":0,},
     {"id":{"name":"spr_V_Attack1_Mask","path":"sprites/spr_V_Attack1_Mask/spr_V_Attack1_Mask.yy",},"order":0,},
     {"id":{"name":"getInput","path":"scripts/getInput/getInput.yy",},"order":1,},
     {"id":{"name":"spr_Verdali_Walk","path":"sprites/spr_Verdali_Walk/spr_Verdali_Walk.yy",},"order":1,},
