@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_testChaos",
-    "path": "sprites/spr_testChaos/spr_testChaos.yy",
+    "name": "spr_V_Attack1_Mask",
+    "path": "sprites/spr_V_Attack1_Mask/spr_V_Attack1_Mask.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_Entity",
-    "path": "objects/obj_Entity/obj_Entity.yy",
+    "name": "obj_hitBoxes",
+    "path": "objects/obj_hitBoxes/obj_hitBoxes.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,18 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"damage","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"objectId":{"name":"obj_hitBoxes","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_chaosPlayer",
+  "name": "obj_V_Attack1_hitBox",
   "tags": [],
   "resourceType": "GMObject",
 }

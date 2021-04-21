@@ -1,8 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function EnemyHit(damage){
+function EnemyHit(damage, flash_num){
 	
-	hitPoints -= damage;
-	flash = 1;
+	other.hitPoints -= damage;
+	other.flash = flash_num;
 	
 }

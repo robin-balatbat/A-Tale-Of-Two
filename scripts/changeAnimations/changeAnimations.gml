@@ -14,6 +14,7 @@ function changeAnimations(){
 					vsp = 0;
 					mask_index = spr_V_Attack1_Mask;
 					changeSprite(0.7, spr_Verdali_Attack1);
+					makeHitBox(1, 3, obj_V_Attack1_hitBox);
 					
 				}
 				// mid-air transform
@@ -41,6 +42,8 @@ function changeAnimations(){
 			else if (state == "Attack") {
 				mask_index = spr_V_Attack1_Mask;
 				changeSprite(0.7, spr_Verdali_Attack1);
+				// hitboxes
+				makeHitBox(1, 3, obj_V_Attack1_hitBox);
 				
 			}
 			// Rolling animation

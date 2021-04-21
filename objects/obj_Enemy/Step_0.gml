@@ -8,3 +8,5 @@ vsp += grv;
 
 // check collisions
 collisions(obj_testWall);
+
+show_debug_message(hitPoints);
