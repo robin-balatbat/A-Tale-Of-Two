@@ -54,7 +54,9 @@ if (key_return) {
 
 // destroy instance once within range
 if (returning) {
+	screenShake(1, 10);
 	if (distance_to_object(obj_verdaliPlayer) < destroy_range) {
+		screenShake(2, 10);
 		global.current_state = PlayerState.Verdali;
 		instance_destroy();
 	}

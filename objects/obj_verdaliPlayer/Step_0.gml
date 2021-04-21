@@ -86,6 +86,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		// spawn chaos
 		if (key_spawnChaos && onGround && hsp == 0 && vsp == 0 && !chaosSpawned){
 			show_debug_message("Chaos has appeared!");
+			screenShake(2, 20);
 			instance_create_layer(x, y, "Player", obj_chaosPlayer);
 			chaosSpawned = true;
 		}
