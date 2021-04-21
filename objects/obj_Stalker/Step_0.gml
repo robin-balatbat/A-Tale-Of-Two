@@ -4,7 +4,6 @@ event_inherited();
 
 // animations
 #region animations
-
 if (!onGround) {
 	// air animations
 	changeSprite(0, spr_Stalker_Air);
@@ -18,14 +17,16 @@ if (!onGround) {
 		image_index = 0;
 					
 	}
-}
-else {
+} else {
 	if (hsp == 0) {
 		changeSprite(1, spr_Stalker_Idle);
-	}
-	else {
+	} else {
 		changeSprite(1, spr_Stalker_Run);
 	}
+}
+
+if (hsp != 0) {
+	image_xscale = sign(hsp);
 }
 
 #endregion
