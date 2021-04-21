@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function changeAnimations(){
+function changeAnimations(identifier){
 	
 	switch (global.current_state) {
 		
@@ -14,13 +14,20 @@ function changeAnimations(){
 					vsp = 0;
 					mask_index = spr_V_Attack1_Mask;
 					changeSprite(0.7, spr_Verdali_Attack1);
-					makeHitBox(1, 3, obj_V_Attack1_hitBox);
+					makeHitBox(1, 3, obj_V_Attack1_hitBox, identifier);
+					
+					if (animationEnd()) {
+						mask_index = spr_Verdali_Mask;
+						state = "Move";
+						image_index = 0;
+					}
 					
 				}
 				// mid-air transform
 				else if (state == "Transform") {
 					vsp = 0;
 					changeSprite(0.7, spr_Verdali_Transform);
+					transform(obj_bondPlayer);
 				}
 				// normal jumping
 				else {
@@ -43,7 +50,13 @@ function changeAnimations(){
 				mask_index = spr_V_Attack1_Mask;
 				changeSprite(0.7, spr_Verdali_Attack1);
 				// hitboxes
-				makeHitBox(1, 3, obj_V_Attack1_hitBox);
+				makeHitBox(1, 3, obj_V_Attack1_hitBox, self);
+				
+				if (animationEnd()) {
+					mask_index = spr_Verdali_Mask;
+					state = "Move";
+					image_index = 0;
+				}
 				
 			}
 			// Rolling animation
@@ -52,10 +65,14 @@ function changeAnimations(){
 					x += image_xscale * rollSpeed;
 					changeSprite(0.6, spr_Verdali_Roll);
 				}
+				if (animationEnd()) {
+					state = "Move";
+				}
 			}
 			// transforming
 			else if (state == "Transform") {
 				changeSprite(0.3, spr_Verdali_Transform);
+				transform(obj_bondPlayer);
 			}
 			// on ground
 			else {
@@ -84,6 +101,12 @@ function changeAnimations(){
 				if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
 					x += image_xscale * dashSpeed;
 					changeSprite(0.6, spr_Bond_Dash);
+					
+				}
+				
+				if (animationEnd()) {
+					state = "Move";
+					image_index = 0;
 				}
 			}
 			// jumping animation
@@ -95,8 +118,6 @@ function changeAnimations(){
 				// mid-air attacking
 				else if (state == "Attack") {
 					vsp = 0;
-					ds_list_clear(hitByAttack);
-					attackScript();
 					mask_index = spr_V_Attack1_Mask;
 					changeSprite(0.6, spr_Verdali_Attack1);
 				}
@@ -104,6 +125,7 @@ function changeAnimations(){
 				else if (state == "Transform") {
 					vsp = 0;
 					changeSprite(0.7, spr_Bond_Transform);
+					transform(obj_verdaliPlayer);
 				}
 				else {
 					changeSprite(0, spr_Bond_Air);
@@ -123,6 +145,7 @@ function changeAnimations(){
 			// transforming
 			else if (state == "Transform") {
 				changeSprite(0.3, spr_Bond_Transform);
+				transform(obj_verdaliPlayer);
 			}
 			// on ground
 			else {

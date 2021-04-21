@@ -119,5 +119,5 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 }
 
 #region animation
-changeAnimations();
+changeAnimations(self);
 #endregion

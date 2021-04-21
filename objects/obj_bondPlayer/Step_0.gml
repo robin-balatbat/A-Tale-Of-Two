@@ -114,5 +114,5 @@ if (state == "Move") {
 
 
 #region animations
-changeAnimations();
+changeAnimations(self);
 #endregion

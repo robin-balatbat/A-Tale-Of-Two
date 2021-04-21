@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_V_Attack1_Mask",
-    "path": "sprites/spr_V_Attack1_Mask/spr_V_Attack1_Mask.yy",
+    "name": "spr_V_NewAttackMask",
+    "path": "sprites/spr_V_NewAttackMask/spr_V_NewAttackMask.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,11 +23,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
-  "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"damage","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"objectId":{"name":"obj_hitBoxes","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
+  "properties": [],
+  "overriddenProperties": [],
   "parent": {
     "name": "Hitboxes",
     "path": "folders/Objects/Hitboxes.yy",
