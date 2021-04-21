@@ -1,8 +1,6 @@
 if (!done) {
 	// runs under basic gravitation movement
 	vsp += grv;
-	
-	
 
 	// Horizontal Collision
 	if (place_meeting(x + hsp, y, obj_testWall)){

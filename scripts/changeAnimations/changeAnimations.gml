@@ -12,10 +12,9 @@ function changeAnimations(){
 				// mid-air attacking
 				if (state == "Attack") {
 					vsp = 0;
-					ds_list_clear(hitByAttack);
-					attackScript();
 					mask_index = spr_V_Attack1_Mask;
-					changeSprite(0.6, spr_Verdali_Attack1);
+					changeSprite(0.7, spr_Verdali_Attack1);
+					
 				}
 				// mid-air transform
 				else if (state == "Transform") {
@@ -40,8 +39,6 @@ function changeAnimations(){
 			}
 			// attacking while on ground
 			else if (state == "Attack") {
-				ds_list_clear(hitByAttack);
-				attackScript();
 				mask_index = spr_V_Attack1_Mask;
 				changeSprite(0.7, spr_Verdali_Attack1);
 				

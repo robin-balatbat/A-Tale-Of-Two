@@ -42,6 +42,3 @@ chaosSpawned = false;
 
 // projectile speed
 projSpeed = 25;
-
-// attacking
-hitByAttack = ds_list_create();
