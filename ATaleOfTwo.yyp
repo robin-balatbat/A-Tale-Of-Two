@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"obj_Stalker_Dead","path":"objects/obj_Stalker_Dead/obj_Stalker_Dead.yy",},"order":10,},
     {"id":{"name":"spr_Magic_Blast","path":"sprites/spr_Magic_Blast/spr_Magic_Blast.yy",},"order":0,},
     {"id":{"name":"spr_testBond","path":"sprites/spr_testBond/spr_testBond.yy",},"order":0,},
     {"id":{"name":"spr_Bond_Wall","path":"sprites/spr_Bond_Wall/spr_Bond_Wall.yy",},"order":5,},
@@ -16,6 +17,7 @@
     {"id":{"name":"spr_Verdali_Run","path":"sprites/spr_Verdali_Run/spr_Verdali_Run.yy",},"order":2,},
     {"id":{"name":"obj_Stalker","path":"objects/obj_Stalker/obj_Stalker.yy",},"order":8,},
     {"id":{"name":"obj_verdaliPlayer","path":"objects/obj_verdaliPlayer/obj_verdaliPlayer.yy",},"order":2,},
+    {"id":{"name":"spr_Stalker_Air","path":"sprites/spr_Stalker_Air/spr_Stalker_Air.yy",},"order":4,},
     {"id":{"name":"changeSprite","path":"scripts/changeSprite/changeSprite.yy",},"order":8,},
     {"id":{"name":"spr_Verdali_Attack1","path":"sprites/spr_Verdali_Attack1/spr_Verdali_Attack1.yy",},"order":6,},
     {"id":{"name":"spr_Verdali","path":"sprites/spr_Verdali/spr_Verdali.yy",},"order":8,},
@@ -43,6 +45,7 @@
     {"id":{"name":"sh_hitFlash","path":"shaders/sh_hitFlash/sh_hitFlash.yy",},"order":0,},
     {"id":{"name":"spr_V_Attack1_Mask","path":"sprites/spr_V_Attack1_Mask/spr_V_Attack1_Mask.yy",},"order":0,},
     {"id":{"name":"getInput","path":"scripts/getInput/getInput.yy",},"order":1,},
+    {"id":{"name":"spr_Stalker_Dead","path":"sprites/spr_Stalker_Dead/spr_Stalker_Dead.yy",},"order":5,},
     {"id":{"name":"spr_Verdali_Walk","path":"sprites/spr_Verdali_Walk/spr_Verdali_Walk.yy",},"order":1,},
     {"id":{"name":"spr_testWall","path":"sprites/spr_testWall/spr_testWall.yy",},"order":2,},
     {"id":{"name":"obj_magic","path":"objects/obj_magic/obj_magic.yy",},"order":5,},
