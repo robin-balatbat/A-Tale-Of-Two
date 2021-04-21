@@ -29,8 +29,8 @@
     {"propertyId":{"name":"damage","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"objectId":{"name":"obj_hitBoxes","path":"objects/obj_hitBoxes/obj_hitBoxes.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hitboxes",
+    "path": "folders/Objects/Hitboxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_V_Attack1_hitBox",

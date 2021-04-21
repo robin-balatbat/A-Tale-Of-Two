@@ -29,8 +29,8 @@
     {"propertyId":{"name":"damage","path":"objects/obj_magic/obj_magic.yy",},"objectId":{"name":"obj_magic","path":"objects/obj_magic/obj_magic.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Projectiles",
+    "path": "folders/Objects/Projectiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Magic_Blast",

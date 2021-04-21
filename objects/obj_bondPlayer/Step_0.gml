@@ -106,7 +106,8 @@ if (state == "Move") {
 	// magic projectile attack TODO limit attack based on mp
 	// TODO: change which obj is spawned
 	if (input.key_magic) {
-		spawnProjectile(4, 30, obj_Magic_Blast);
+		spawnProjectile(4, 30, obj_Magic_Blast,self);
+		
 	}
 	#endregion
 }

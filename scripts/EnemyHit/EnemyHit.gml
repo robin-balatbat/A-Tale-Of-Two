@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyHit(damage, flash_num){
 	
-	other.hitPoints -= damage;
-	other.flash = flash_num;
+	hitPoints -= damage;
+	flash = flash_num;
 	
 }

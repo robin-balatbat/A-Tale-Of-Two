@@ -32,8 +32,8 @@
     {"propertyId":{"name":"vsp","path":"objects/obj_Enemy/obj_Enemy.yy",},"objectId":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"value":"-4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Stalker_Dead",
