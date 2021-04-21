@@ -104,7 +104,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		
 		// magic projectile attack TODO limit attack based on mp
 		if (input.key_magic) {
-			spawnProjectile(4, 20, obj_magic);
+			spawnProjectile(4, 30, obj_Magic_Blast);
 		}
 		
 		// change to attacking state
