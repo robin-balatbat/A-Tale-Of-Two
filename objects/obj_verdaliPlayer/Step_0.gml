@@ -128,8 +128,8 @@ if (!onGround) {
 		mask_index = spr_V_Attack1_Mask;
 		changeSprite(0.7, spr_Verdali_Attack1);
 					
-		if (animationHitFrame(0)) {
-			makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 2, 5, image_xscale);
+		if (animationHitFrame(2)) {
+			makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
 		}
 					
 					
@@ -167,8 +167,8 @@ else if (state == "Attack") {
 	mask_index = spr_V_Attack1_Mask;
 	changeSprite(0.7, spr_Verdali_Attack1);
 	// hitboxes
-	if (animationHitFrame(0)) {
-		makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 2, 5, image_xscale);
+	if (animationHitFrame(2)) {
+		makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
 	}
 				
 	if (animationEnd()) {
