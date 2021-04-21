@@ -114,5 +114,71 @@ if (state == "Move") {
 
 
 #region animations
-changeAnimations(self);
+// Dashinging animation
+if (state == "Dash") {
+	if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
+		x += image_xscale * dashSpeed;
+		changeSprite(0.6, spr_Bond_Dash);
+					
+	}
+				
+	if (animationEnd()) {
+		state = "Move";
+		image_index = 0;
+	}
+}
+// jumping animation
+else if (!onGround) {
+				
+	if (onWall != 0) {
+		changeSprite(1, spr_Bond_Wall);
+	}
+	// mid-air attacking
+	else if (state == "Attack") {
+		vsp = 0;
+		mask_index = spr_V_Attack1_Mask;
+		changeSprite(0.6, spr_Verdali_Attack1);
+	}
+	// mid-air transform
+	else if (state == "Transform") {
+		vsp = 0;
+		changeSprite(0.7, spr_Bond_Transform);
+		transform(obj_verdaliPlayer);
+	}
+	else {
+		changeSprite(0, spr_Bond_Air);
+	
+		// falling down
+		if (sign(vsp) > 0) {
+			image_index = 1;
+		}
+		// jumping up
+		else {
+			image_index = 0;
+		}
+	}
+	
+				
+}
+// transforming
+else if (state == "Transform") {
+	changeSprite(0.3, spr_Bond_Transform);
+	transform(obj_verdaliPlayer);
+}
+// on ground
+else {
+	// idle
+	if (hsp == 0) {
+		changeSprite(1, spr_Bond_Idle);
+	}
+	// walking
+	else if (abs(hsp) > 0 && abs(hsp) <= 3) {
+		changeSprite(1, spr_Bond_Walk);
+	}
+	// running
+	else {
+		changeSprite(1, spr_Bond_Run);
+	}
+
+}
 #endregion
