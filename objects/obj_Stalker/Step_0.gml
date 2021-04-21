@@ -17,6 +17,17 @@ if (!onGround) {
 		image_index = 0;
 					
 	}
+} else if (state == "Attack") {
+	changeSprite(1, spr_Stalker_Attack);
+	// hitboxes
+	//if (animationHitFrame(2)) {
+	//	//makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
+	//}
+				
+	if (animationEnd()) {
+		state = "Chase";
+		image_index = 0;
+	}
 } else {
 	if (hsp == 0) {
 		changeSprite(1, spr_Stalker_Idle);

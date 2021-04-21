@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"getPlayerStateObj","path":"scripts/getPlayerStateObj/getPlayerStateObj.yy",},"order":15,},
     {"id":{"name":"obj_Stalker_Dead","path":"objects/obj_Stalker_Dead/obj_Stalker_Dead.yy",},"order":2,},
     {"id":{"name":"spr_Magic_Blast","path":"sprites/spr_Magic_Blast/spr_Magic_Blast.yy",},"order":0,},
     {"id":{"name":"spr_testBond","path":"sprites/spr_testBond/spr_testBond.yy",},"order":0,},
