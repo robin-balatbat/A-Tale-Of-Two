@@ -39,3 +39,5 @@ jumped = true;
 
 // projectile attack speed
 projSpeed = 15;
+
+flash = 0;

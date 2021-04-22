@@ -1,4 +1,4 @@
-
+/// @description Movement, Attacking, and Animation
 // Can only move Verdali when chaos is not spawned
 if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 	

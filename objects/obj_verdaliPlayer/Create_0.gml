@@ -1,5 +1,4 @@
-
-/// @description Variables for Bond state movement
+/// @description Variables for Verdali state movement
 
 global.current_state = PlayerState.Verdali;
 
@@ -42,3 +41,5 @@ chaosSpawned = false;
 
 // projectile speed
 projSpeed = 25;
+
+flash = 0;

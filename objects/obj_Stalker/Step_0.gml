@@ -20,9 +20,9 @@ if (!onGround) {
 } else if (state == "Attack") {
 	changeSprite(1, spr_Stalker_Attack);
 	// hitboxes
-	//if (animationHitFrame(2)) {
-	//	//makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
-	//}
+	if (animationHitFrame(5)) {
+		makeHitBox(4, 6, spr_Stalker_Attack_Mask, self, 2, 4, damage, image_xscale);
+	}
 				
 	if (animationEnd()) {
 		state = "Chase";
