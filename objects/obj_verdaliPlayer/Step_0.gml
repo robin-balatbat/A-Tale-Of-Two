@@ -111,12 +111,19 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		// change to attacking state
 		if (input.key_attack) {
 			state = "Attack";
+			
+			// combo
+			if (input.key_attack && animationFrameRange(2, 5)){
+				state = "Attack Two";
+			}
 		}
 		#endregion
 		
 	}
 	
 }
+
+show_debug_message(state);
 
 #region animation
 // Jumping
@@ -131,7 +138,6 @@ if (!onGround) {
 		if (animationHitFrame(2)) {
 			makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
 		}
-					
 					
 		if (animationEnd()) {
 			mask_index = spr_Verdali_Mask;
@@ -164,8 +170,7 @@ if (!onGround) {
 }
 // attacking while on ground
 else if (state == "Attack") {
-	mask_index = spr_V_Attack1_Mask;
-	changeSprite(0.7, spr_Verdali_Attack1);
+	changeSprite(0.5, spr_Verdali_Attack1);
 	// hitboxes
 	if (animationHitFrame(2)) {
 		makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
@@ -177,6 +182,19 @@ else if (state == "Attack") {
 		image_index = 0;
 	}
 				
+} else if (state == "Attack Two") {
+	
+	changeSprite(0.5, spr_Verdali_Attack2);
+	
+	if (animationHitFrame(2)) {
+		makeHitBox(1, 3, spr_Verdali_Attack2_Mask, self, 2, 4, 5, image_xscale);
+	}
+		
+	if (animationEnd()) {
+		mask_index = spr_Verdali_Mask;
+		state = "Move";
+		image_index = 0;
+	}
 }
 // Rolling animation
 else if (state == "Roll") {

@@ -23,6 +23,7 @@
     {"id":{"name":"obj_Players","path":"objects/obj_Players/obj_Players.yy",},"order":3,},
     {"id":{"name":"obj_verdaliPlayer","path":"objects/obj_verdaliPlayer/obj_verdaliPlayer.yy",},"order":1,},
     {"id":{"name":"spr_Stalker_Air","path":"sprites/spr_Stalker_Air/spr_Stalker_Air.yy",},"order":4,},
+    {"id":{"name":"spr_Verdali_Attack2_Mask","path":"sprites/spr_Verdali_Attack2_Mask/spr_Verdali_Attack2_Mask.yy",},"order":2,},
     {"id":{"name":"changeSprite","path":"scripts/changeSprite/changeSprite.yy",},"order":8,},
     {"id":{"name":"spr_Verdali_Attack1","path":"sprites/spr_Verdali_Attack1/spr_Verdali_Attack1.yy",},"order":6,},
     {"id":{"name":"spr_Verdali","path":"sprites/spr_Verdali/spr_Verdali.yy",},"order":8,},
@@ -38,6 +39,7 @@
     {"id":{"name":"spr_Verdali_Mask","path":"sprites/spr_Verdali_Mask/spr_Verdali_Mask.yy",},"order":0,},
     {"id":{"name":"accelAndDecel","path":"scripts/accelAndDecel/accelAndDecel.yy",},"order":7,},
     {"id":{"name":"spr_Bond_Run","path":"sprites/spr_Bond_Run/spr_Bond_Run.yy",},"order":3,},
+    {"id":{"name":"spr_Verdali_Attack2","path":"sprites/spr_Verdali_Attack2/spr_Verdali_Attack2.yy",},"order":9,},
     {"id":{"name":"EnemyHit","path":"scripts/EnemyHit/EnemyHit.yy",},"order":10,},
     {"id":{"name":"spr_testChaos","path":"sprites/spr_testChaos/spr_testChaos.yy",},"order":3,},
     {"id":{"name":"spr_V_NewAttackMask","path":"sprites/spr_V_NewAttackMask/spr_V_NewAttackMask.yy",},"order":1,},
@@ -63,6 +65,7 @@
     {"id":{"name":"spr_Stalker_Idle","path":"sprites/spr_Stalker_Idle/spr_Stalker_Idle.yy",},"order":0,},
     {"id":{"name":"obj_Magic_Blast","path":"objects/obj_Magic_Blast/obj_Magic_Blast.yy",},"order":1,},
     {"id":{"name":"spr_Bond_Idle","path":"sprites/spr_Bond_Idle/spr_Bond_Idle.yy",},"order":0,},
+    {"id":{"name":"animationFrameRange","path":"scripts/animationFrameRange/animationFrameRange.yy",},"order":17,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
