@@ -45,6 +45,7 @@ switch (state) {
 		
 		counter++;
 		
+		// Transition triggers
 		if (counter >= room_speed * 3) {
 			var change = choose(0,1);
 			switch (change) {
@@ -55,13 +56,19 @@ switch (state) {
 					break;
 			}
 		}
-
+		
+		if (distance_to_object(getPlayerStateObj()) < chaseRange) {
+			state = "Chase";
+		}
+		
+		// when colliding with wall, turn around
 		if (hsp == 0) {
 			hsp = -moveSpeed * image_xscale;
 		}
 		
-		if (distance_to_object(getPlayerStateObj()) < chaseRange) {
-			state = "Chase";
+		// do not fall off ledge
+		if (onGround && !place_meeting(x + hsp, y + 1, obj_testWall)) {
+			hsp = -moveSpeed * image_xscale;
 		}
 		
 		break;
@@ -78,6 +85,7 @@ switch (state) {
 		
 		collisions(obj_testWall);
 		
+		// transitions
 		if (distance_to_object(getPlayerStateObj()) > chaseRange) {
 			state = "Wander";
 		} else if (distance_to_object(getPlayerStateObj()) <= attackRange) {
