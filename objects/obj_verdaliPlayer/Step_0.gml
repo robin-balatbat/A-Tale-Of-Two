@@ -123,8 +123,6 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 	
 }
 
-show_debug_message(state);
-
 #region animation
 // Jumping
 if (!onGround) {
@@ -182,7 +180,9 @@ else if (state == "Attack") {
 		image_index = 0;
 	}
 				
-} else if (state == "Attack Two") {
+}
+// Attack 2
+else if (state == "Attack Two") {
 	
 	changeSprite(0.5, spr_Verdali_Attack2);
 	
