@@ -13,7 +13,7 @@ function getInput(){
 	key_up = keyboard_check(vk_up); // chaos only movement
 	key_down = keyboard_check(vk_down); // chaos only movement
 	key_jump = keyboard_check_pressed(vk_space);
-	key_dash = keyboard_check_pressed(vk_lshift); // also serves as Verdali's roll
+	key_dash = keyboard_check_pressed(vk_lshift) || mouse_check_button_pressed(mb_right); // also serves as Verdali's roll
 	// key_interact = keyboard_check_pressed(ord("E")); // only in chaos and verdali state
 	// changing form between Verdali and Bond is independent to each object
 
@@ -23,6 +23,6 @@ function getInput(){
 	key_magic = keyboard_check_pressed(ord("Q"));
 	
 	// melee attack
-	key_attack = keyboard_check_pressed(ord("F"));
+	key_attack = keyboard_check_pressed(ord("F")) || mouse_check_button_pressed(mb_left);
 
 }
