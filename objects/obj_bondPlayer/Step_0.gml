@@ -109,6 +109,11 @@ if (state == "Move") {
 		spawnProjectile(4, 30, obj_Magic_Blast,self);
 		
 	}
+	
+	// change to attacking state
+	if (input.key_attack && onWall == 0) {
+		state = "Attack";
+	}
 	#endregion
 }
 
@@ -136,8 +141,17 @@ else if (!onGround) {
 	// mid-air attacking
 	else if (state == "Attack") {
 		vsp = 0;
-		mask_index = spr_V_Attack1_Mask;
-		changeSprite(0.6, spr_Verdali_Attack1);
+		changeSprite(0.7, spr_Bond_Attack);
+					
+		if (animationHitFrame(2)) {
+			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, 10, image_xscale);
+		}
+					
+		if (animationEnd()) {
+			state = "Move";
+			image_index = 0;
+		}
+					
 	}
 	// mid-air transform
 	else if (state == "Transform") {
@@ -164,6 +178,20 @@ else if (!onGround) {
 else if (state == "Transform") {
 	changeSprite(0.3, spr_Bond_Transform);
 	transform(obj_verdaliPlayer);
+}
+// attacking while on ground
+else if (state == "Attack") {
+	changeSprite(0.5, spr_Bond_Attack);
+	// hitboxes
+	if (animationHitFrame(2)) {
+		makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, 10, image_xscale);
+	}
+				
+	if (animationEnd()) {
+		state = "Move";
+		image_index = 0;
+	}
+				
 }
 // on ground
 else {
