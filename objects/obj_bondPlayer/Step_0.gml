@@ -144,7 +144,7 @@ else if (!onGround) {
 		changeSprite(0.7, spr_Bond_Attack);
 					
 		if (animationHitFrame(2)) {
-			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, 10, image_xscale);
+			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, damageNum, image_xscale);
 		}
 					
 		if (animationEnd()) {
@@ -184,7 +184,7 @@ else if (state == "Attack") {
 	changeSprite(0.5, spr_Bond_Attack);
 	// hitboxes
 	if (animationHitFrame(2)) {
-		makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, 10, image_xscale);
+		makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, damageNum, image_xscale);
 	}
 				
 	if (animationEnd()) {

@@ -74,7 +74,10 @@ switch (state) {
 		break;
 		
 	case "Chase":
+	
+		onGround = place_meeting(x, y + 1, obj_testWall);
 		
+		// move towards player
 		dir = sign(getPlayerStateObj().x - x);
 		if (dir == 0) {
 			image_xscale = 1;
@@ -91,6 +94,12 @@ switch (state) {
 		} else if (distance_to_object(getPlayerStateObj()) <= attackRange) {
 			state = "Attack";
 		}
+		
+		// do not fall off ledge
+		if (onGround && !place_meeting(x + hsp, y + 1, obj_testWall)) {
+			hsp = -moveSpeed * image_xscale;
+		}
+		
 		break;
 		
 	case "Attack":

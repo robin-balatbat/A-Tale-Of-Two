@@ -40,4 +40,7 @@ jumped = true;
 // projectile attack speed
 projSpeed = 15;
 
+// for getting hurt
 flash = 0;
+
+damageNum = obj_verdaliPlayer.damageNum * 2;
