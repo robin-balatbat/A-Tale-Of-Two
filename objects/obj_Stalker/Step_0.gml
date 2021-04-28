@@ -21,7 +21,7 @@ if (!onGround) {
 	changeSprite(1, spr_Stalker_Attack);
 	// hitboxes
 	if (animationHitFrame(5)) {
-		makeHitBox(4, 6, spr_Stalker_Attack_Mask, self, 2, 4, damage, image_xscale);
+		makeHitBox(spr_Stalker_Attack_Mask, self, 2, 4, damage, image_xscale);
 	}
 				
 	if (animationEnd()) {

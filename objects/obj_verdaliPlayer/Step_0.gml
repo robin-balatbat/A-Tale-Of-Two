@@ -123,6 +123,8 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 	
 }
 
+show_debug_message(state);
+
 #region animation
 // Jumping
 if (!onGround) {
@@ -134,7 +136,7 @@ if (!onGround) {
 		changeSprite(0.7, spr_Verdali_Attack1);
 					
 		if (animationHitFrame(2)) {
-			makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
+			makeHitBox(spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
 		}
 					
 		if (animationEnd()) {
@@ -171,7 +173,7 @@ else if (state == "Attack") {
 	changeSprite(0.5, spr_Verdali_Attack1);
 	// hitboxes
 	if (animationHitFrame(2)) {
-		makeHitBox(1, 3, spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
+		makeHitBox(spr_V_NewAttackMask, self, 2, 4, 5, image_xscale);
 	}
 				
 	if (animationEnd()) {
@@ -187,7 +189,7 @@ else if (state == "Attack Two") {
 	changeSprite(0.5, spr_Verdali_Attack2);
 	
 	if (animationHitFrame(2)) {
-		makeHitBox(1, 3, spr_Verdali_Attack2_Mask, self, 2, 4, 5, image_xscale);
+		makeHitBox(spr_Verdali_Attack2_Mask, self, 2, 4, 5, image_xscale);
 	}
 		
 	if (animationEnd()) {
