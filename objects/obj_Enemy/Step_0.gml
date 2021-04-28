@@ -1,5 +1,5 @@
 /// @description Basic movement
-
+show_debug_message(state);
 switch (state) {
 	
 	case "Idle":
@@ -103,6 +103,13 @@ switch (state) {
 		break;
 		
 	case "Attack":
-		// does not need anything right now
+		
+		// handle the case when enemy falls off ledge
+		onGround = place_meeting(x, y + 1, obj_testWall);
+		
+		if (!onGround) {
+			state = "Chase";
+		}
+		
 		break;
 }
