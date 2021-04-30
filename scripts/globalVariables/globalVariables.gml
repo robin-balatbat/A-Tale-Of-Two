@@ -21,7 +21,7 @@ global.bond_hp = global.bond_maxHp;
 //global.bond_maxMp = 25;
 
 // Variables for Chaos state
-//global.chaos_hp = 10;
-//global.chaos_maxHp = 10;
+global.chaos_hp = 10;
+global.chaos_maxHp = 10;
 //global.chaos_mp = 30;
 //global.chaos_maxMp = 30;
