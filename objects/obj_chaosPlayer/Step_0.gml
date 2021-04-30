@@ -17,6 +17,11 @@ if (hDir != 0 || vDir != 0){
 	y += moveY;
 }
 
+// magic projectile attack limit attack based on mp
+if (input.key_magic && global.verdali_mp > 0) {
+	spawnProjectile(1, 1, obj_Magic_Blast, self);	
+}
+
 // move back to verdali upon key_return press
 if (key_return) {
 	move_towards_point(verdali_location.x, verdali_location.y, return_speed);
@@ -24,17 +29,20 @@ if (key_return) {
 	
 }
 
+// return if hp is depleted
+if (global.chaos_hp <= 0) {
+	move_towards_point(verdali_location.x, verdali_location.y, return_speed);
+	returning = true;
+}
+
+// return if mp is depleted
+if (global.chaos_mp <= 0) {
+	move_towards_point(verdali_location.x, verdali_location.y, return_speed);
+	returning = true;
+}
+
 /* TODO upon collision with corruption
 	reduce health
-	
-	if (global.chaosHealth <= 0) {
-		return to verdali
-	}
-	
-	TODO if chaos runs out of energy, return
-	if (global.chaosEnergy <= 0) {
-		return to verdali
-	}
 	
 	TODO flip the switch in a room upon interact key
 	if (key_interact && in range of switch) {
@@ -61,3 +69,5 @@ if (returning) {
 		instance_destroy();
 	}
 }
+
+// TODO, Update Animations

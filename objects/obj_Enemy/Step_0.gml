@@ -1,5 +1,5 @@
 /// @description Basic movement
-show_debug_message(state);
+
 switch (state) {
 	
 	case "Idle":
@@ -25,7 +25,7 @@ switch (state) {
 			}
 		}
 		
-		if (distance_to_object(getPlayerStateObj()) < chaseRange) {
+		if ((distance_to_object(getPlayerStateObj()) < chaseRange) && (global.current_state != PlayerState.Chaos)) {
 			state = "Chase";
 		}
 		
@@ -57,7 +57,7 @@ switch (state) {
 			}
 		}
 		
-		if (distance_to_object(getPlayerStateObj()) < chaseRange) {
+		if (distance_to_object(getPlayerStateObj()) < chaseRange && (global.current_state != PlayerState.Chaos)) {
 			state = "Chase";
 		}
 		
@@ -91,7 +91,7 @@ switch (state) {
 		// transitions
 		if (distance_to_object(getPlayerStateObj()) > chaseRange) {
 			state = "Wander";
-		} else if (distance_to_object(getPlayerStateObj()) <= attackRange) {
+		} else if (distance_to_object(getPlayerStateObj()) <= attackRange && (global.current_state != PlayerState.Chaos)) {
 			state = "Attack";
 		}
 		

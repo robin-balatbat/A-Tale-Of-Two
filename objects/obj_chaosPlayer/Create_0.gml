@@ -15,3 +15,6 @@ verdali_location = obj_verdaliPlayer;
 returning = false;
 return_speed = 5;
 destroy_range = 10;
+
+// magic attack
+projSpeed = 30;
