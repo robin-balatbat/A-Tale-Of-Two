@@ -113,7 +113,8 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 			state = "Attack";
 			
 			// combo
-			if (input.key_attack && animationFrameRange(2, 5)){
+			if (input.key_attack && image_index >= 2){
+				image_index = 0;
 				state = "Attack Two";
 			}
 		}
@@ -131,7 +132,6 @@ if (!onGround) {
 	// mid-air attacking
 	if (state == "Attack") {
 		vsp = 0;
-		mask_index = spr_V_Attack1_Mask;
 		changeSprite(0.7, spr_Verdali_Attack1);
 					
 		if (animationHitFrame(2)) {
@@ -139,7 +139,6 @@ if (!onGround) {
 		}
 					
 		if (animationEnd()) {
-			mask_index = spr_Verdali_Mask;
 			state = "Move";
 			image_index = 0;
 		}
@@ -176,7 +175,6 @@ else if (state == "Attack") {
 	}
 				
 	if (animationEnd()) {
-		mask_index = spr_Verdali_Mask;
 		state = "Move";
 		image_index = 0;
 	}
@@ -192,7 +190,6 @@ else if (state == "Attack Two") {
 	}
 		
 	if (animationEnd()) {
-		mask_index = spr_Verdali_Mask;
 		state = "Move";
 		image_index = 0;
 	}
