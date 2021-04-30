@@ -103,7 +103,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		#region attacking and magic
 		
 		// magic projectile attack TODO limit attack based on mp
-		if (input.key_magic) {
+		if (input.key_magic && global.verdali_mp > 0) {
 			spawnProjectile(4, 30, obj_Magic_Blast, self);
 			
 		}

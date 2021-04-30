@@ -4,7 +4,6 @@ global.current_state = PlayerState.Verdali;
 
 // dependency for getting player input
 input = instance_create_layer(0, 0, "Instances", obj_input);
-instance_create_layer(0, 0, "Player", obj_Health_Bars);
 
 // basic movement variables
 moveSpeed = 3;
