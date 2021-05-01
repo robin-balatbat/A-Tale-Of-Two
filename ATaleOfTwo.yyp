@@ -27,6 +27,7 @@
     {"id":{"name":"spr_Verdali_Run","path":"sprites/spr_Verdali_Run/spr_Verdali_Run.yy",},"order":2,},
     {"id":{"name":"obj_Stalker","path":"objects/obj_Stalker/obj_Stalker.yy",},"order":1,},
     {"id":{"name":"obj_Health_Bars","path":"objects/obj_Health_Bars/obj_Health_Bars.yy",},"order":18,},
+    {"id":{"name":"roundDir","path":"scripts/roundDir/roundDir.yy",},"order":18,},
     {"id":{"name":"obj_Players","path":"objects/obj_Players/obj_Players.yy",},"order":3,},
     {"id":{"name":"spr_Chaos_DownRight","path":"sprites/spr_Chaos_DownRight/spr_Chaos_DownRight.yy",},"order":4,},
     {"id":{"name":"obj_verdaliPlayer","path":"objects/obj_verdaliPlayer/obj_verdaliPlayer.yy",},"order":1,},

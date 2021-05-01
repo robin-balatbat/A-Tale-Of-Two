@@ -9,6 +9,11 @@ input = obj_input;
 
 // movement variables
 moveSpeed = 4;
+moveX = 0;
+moveY = 0;
+hDir = 0;
+vDir = 0;
+dir = 0;
 
 // variables for returning back to main character
 verdali_location = obj_verdaliPlayer;
