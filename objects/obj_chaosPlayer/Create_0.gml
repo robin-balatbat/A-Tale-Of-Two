@@ -1,6 +1,7 @@
 /// @description Initialize variables
 
 global.current_state = PlayerState.Chaos;
+global.chaos_mp = global.chaos_maxMp;
 
 // dependency for getting player input
 // input object should already exist when Chaos is spawned

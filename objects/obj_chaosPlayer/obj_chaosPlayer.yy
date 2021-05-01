@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_testChaos",
-    "path": "sprites/spr_testChaos/spr_testChaos.yy",
+    "name": "spr_Chaos_Right",
+    "path": "sprites/spr_Chaos_Right/spr_Chaos_Right.yy",
   },
   "solid": false,
   "visible": true,
