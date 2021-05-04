@@ -64,7 +64,7 @@ if (global.chaos_mp <= 0) {
 		// moving code inside here
 	}
 */
-show_debug_message(dir);
+
 // Update Animations
 image_xscale = 1;
 switch(dir) {
@@ -95,6 +95,10 @@ switch(dir) {
 	case 315:
 		changeSprite(0.5, spr_Chaos_DownRight);
 		break;
+}
+
+if (hDir == 0 && vDir == 0) {
+	changeSprite(0.2, spr_Chaos_Idle);
 }
 
 // destroy instance once within range
