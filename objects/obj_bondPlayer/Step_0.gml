@@ -118,94 +118,96 @@ if (state == "Move") {
 
 
 #region animations
-// Dashinging animation
-if (state == "Dash") {
-	if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
-		x += image_xscale * dashSpeed;
-		changeSprite(0.6, spr_Bond_Dash);
+switch (state) {
+	#region Move
+	case "Move":
+		if (!onGround) {
+			if (onWall != 0) {
+				changeSprite(1, spr_Bond_Wall);
+			}
+			// mid-air attacking
+			else if (state == "Attack") {
+				vsp = 0;
+				changeSprite(0.7, spr_Bond_Attack);
 					
-	}
-				
-	if (animationEnd()) {
-		state = "Move";
-		image_index = 0;
-	}
-}
-// jumping animation
-else if (!onGround) {
-				
-	if (onWall != 0) {
-		changeSprite(1, spr_Bond_Wall);
-	}
-	// mid-air attacking
-	else if (state == "Attack") {
-		vsp = 0;
-		changeSprite(0.7, spr_Bond_Attack);
+				if (animationHitFrame(2)) {
+					makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, global.bond_damageNum, image_xscale);
+				}
 					
-		if (animationHitFrame(2)) {
-			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, damageNum, image_xscale);
+				if (animationEnd()) {
+					state = "Move";
+					image_index = 0;
+				}
+					
+			}
+			// mid-air transform
+			else if (state == "Transform") {
+				vsp = 0;
+				changeSprite(0.7, spr_Bond_Transform);
+				transform(obj_verdaliPlayer);
+			}
+			else {
+				changeSprite(0, spr_Bond_Air);
+	
+				// falling down
+				if (sign(vsp) > 0) {
+					image_index = 1;
+				}
+				// jumping up
+				else {
+					image_index = 0;
+				}
+			}
 		}
+		else {
+			// idle
+			if (hsp == 0) {
+				changeSprite(1, spr_Bond_Idle);
+			}
+			// walking
+			else if (abs(hsp) > 0 && abs(hsp) <= 3) {
+				changeSprite(1, spr_Bond_Walk);
+			}
+			// running
+			else {
+				changeSprite(1, spr_Bond_Run);
+			}
+		}
+		break;
+	#endregion
+	#region Dashing
+	case "Dash":
+		if (!place_meeting(x + dashSpeed, y, obj_testWall) && !place_meeting(x - dashSpeed, y, obj_testWall)) {
+			x += image_xscale * dashSpeed;
+			changeSprite(0.6, spr_Bond_Dash);
 					
+		}
+				
 		if (animationEnd()) {
 			state = "Move";
 			image_index = 0;
 		}
-					
-	}
-	// mid-air transform
-	else if (state == "Transform") {
-		vsp = 0;
-		changeSprite(0.7, spr_Bond_Transform);
-		transform(obj_verdaliPlayer);
-	}
-	else {
-		changeSprite(0, spr_Bond_Air);
-	
-		// falling down
-		if (sign(vsp) > 0) {
-			image_index = 1;
+		break;
+	#endregion
+	#region Attacking
+	case "Attack":
+		changeSprite(0.5, spr_Bond_Attack);
+		// hitboxes
+		if (animationHitFrame(2)) {
+			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, global.bond_damageNum, image_xscale);
 		}
-		// jumping up
-		else {
+				
+		if (animationEnd()) {
+			state = "Move";
 			image_index = 0;
 		}
-	}
-	
-				
-}
-// transforming
-else if (state == "Transform") {
-	changeSprite(0.3, spr_Bond_Transform);
-	transform(obj_verdaliPlayer);
-}
-// attacking while on ground
-else if (state == "Attack") {
-	changeSprite(0.5, spr_Bond_Attack);
-	// hitboxes
-	if (animationHitFrame(2)) {
-		makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, damageNum, image_xscale);
-	}
-				
-	if (animationEnd()) {
-		state = "Move";
-		image_index = 0;
-	}
-				
-}
-// on ground
-else {
-	// idle
-	if (hsp == 0) {
-		changeSprite(1, spr_Bond_Idle);
-	}
-	// walking
-	else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-		changeSprite(1, spr_Bond_Walk);
-	}
-	// running
-	else {
-		changeSprite(1, spr_Bond_Run);
-	}
-
+		break;
+	#endregion
+	#region Transform
+	case "Transform":
+		changeSprite(0.3, spr_Bond_Transform);
+		transform(obj_verdaliPlayer);
+		break;
+	#endregion
 }
 #endregion

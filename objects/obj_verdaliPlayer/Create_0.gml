@@ -44,6 +44,3 @@ projSpeed = 25;
 
 // for getting hurt
 flash = 0;
-
-// attack
-damageNum = 5;

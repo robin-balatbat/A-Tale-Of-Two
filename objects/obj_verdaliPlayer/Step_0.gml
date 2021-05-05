@@ -125,103 +125,106 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 
 
 #region animation
-// Jumping
-if (!onGround) {
+switch (state) {
+	#region Move
+	case "Move":
+		if (!onGround) {
+			// mid-air attacking
+			if (state == "Attack") {
+				vsp = 0;
+				changeSprite(0.7, spr_Verdali_Attack1);
+					
+				if (animationHitFrame(2)) {
+					makeHitBox(spr_V_NewAttackMask, self, 2, 4, global.verdali_damageNum, image_xscale);
+				}
+					
+				if (animationEnd()) {
+					state = "Move";
+					image_index = 0;
+				}
+					
+			}
+			// mid-air transform
+			else if (state == "Transform") {
+				vsp = 0;
+				changeSprite(0.7, spr_Verdali_Transform);
+				transform(obj_bondPlayer);
+			}
+			// normal jumping
+			else {
+				changeSprite(0, spr_Verdali_Air);
 				
-	// mid-air attacking
-	if (state == "Attack") {
-		vsp = 0;
-		changeSprite(0.7, spr_Verdali_Attack1);
+				// falling down
+				if (sign(vsp) > 0) {
+					image_index = 1;
+				}
+				// jumping up
+				else {
+					image_index = 0;
 					
-		if (animationHitFrame(2)) {
-			makeHitBox(spr_V_NewAttackMask, self, 2, 4, damageNum, image_xscale);
+				}
+			}
+		} // on ground
+		else {
+			// idle
+			if (hsp == 0) {
+				changeSprite(1, spr_Verdali);
+			}
+			// walking
+			else if (abs(hsp) > 0 && abs(hsp) <= 3) {
+				changeSprite(1, spr_Verdali_Walk);
+			}
+			// running
+			else {
+				changeSprite(1, spr_Verdali_Run);
+			}
+
 		}
-					
+		break;
+	#endregion
+	#region Attacking
+	case "Attack":
+		changeSprite(0.5, spr_Verdali_Attack1);
+		// hitboxes
+		if (animationHitFrame(2)) {
+			makeHitBox(spr_V_NewAttackMask, self, 2, 4, global.verdali_damageNum, image_xscale);
+		}
+				
 		if (animationEnd()) {
 			state = "Move";
 			image_index = 0;
 		}
-					
-	}
-	// mid-air transform
-	else if (state == "Transform") {
-		vsp = 0;
-		changeSprite(0.7, spr_Verdali_Transform);
-		transform(obj_bondPlayer);
-	}
-	// normal jumping
-	else {
-		changeSprite(0, spr_Verdali_Air);
-				
-		// falling down
-		if (sign(vsp) > 0) {
-			image_index = 1;
-		}
-		// jumping up
-		else {
-			image_index = 0;
-					
-		}
-	}
-				
-}
-// attacking while on ground
-else if (state == "Attack") {
-	changeSprite(0.5, spr_Verdali_Attack1);
-	// hitboxes
-	if (animationHitFrame(2)) {
-		makeHitBox(spr_V_NewAttackMask, self, 2, 4, damageNum, image_xscale);
-	}
-				
-	if (animationEnd()) {
-		state = "Move";
-		image_index = 0;
-	}
-				
-}
-// Attack 2
-else if (state == "Attack Two") {
-	
-	changeSprite(0.5, spr_Verdali_Attack2);
-	
-	if (animationHitFrame(2)) {
-		makeHitBox(spr_Verdali_Attack2_Mask, self, 2, 4, damageNum, image_xscale);
-	}
+		break;
 		
-	if (animationEnd()) {
-		state = "Move";
-		image_index = 0;
-	}
-}
-// Rolling animation
-else if (state == "Roll") {
-	if (!place_meeting(x + rollSpeed, y, obj_testWall) && !place_meeting(x - rollSpeed, y, obj_testWall)) {
-		x += image_xscale * rollSpeed;
-		changeSprite(0.6, spr_Verdali_Roll);
-	}
-	if (animationEnd()) {
-		state = "Move";
-	}
-}
-// transforming
-else if (state == "Transform") {
-	changeSprite(0.3, spr_Verdali_Transform);
-	transform(obj_bondPlayer);
-}
-// on ground
-else {
-	// idle
-	if (hsp == 0) {
-		changeSprite(1, spr_Verdali);
-	}
-	// walking
-	else if (abs(hsp) > 0 && abs(hsp) <= 3) {
-		changeSprite(1, spr_Verdali_Walk);
-	}
-	// running
-	else {
-		changeSprite(1, spr_Verdali_Run);
-	}
-
+	case "Attack Two":
+		changeSprite(0.5, spr_Verdali_Attack2);
+	
+		if (animationHitFrame(2)) {
+			makeHitBox(spr_Verdali_Attack2_Mask, self, 2, 4, global.verdali_damageNum, image_xscale);
+		}
+		
+		if (animationEnd()) {
+			state = "Move";
+			image_index = 0;
+		}
+		break;
+	#endregion
+	#region Rolling
+	case "Roll":
+		if (!place_meeting(x + rollSpeed, y, obj_testWall) && !place_meeting(x - rollSpeed, y, obj_testWall)) {
+			x += image_xscale * rollSpeed;
+			changeSprite(0.6, spr_Verdali_Roll);
+		}
+		if (animationEnd()) {
+			state = "Move";
+		}
+		break;
+	#endregion
+	#region Transform
+	case "Transform":
+		changeSprite(0.3, spr_Verdali_Transform);
+		transform(obj_bondPlayer);
+		break;
+	#endregion
 }
 #endregion

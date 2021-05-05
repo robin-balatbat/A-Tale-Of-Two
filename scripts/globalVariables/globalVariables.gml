@@ -13,13 +13,14 @@ global.verdali_maxHp = 25;
 global.verdali_hp = global.verdali_maxHp;
 global.verdali_maxMp = 50;
 global.verdali_mp = global.verdali_maxMp;
+global.verdali_damageNum = 5;
 
 // Variables for Bond state
 global.bond_maxHp = 50;
 global.bond_hp = global.bond_maxHp;
-
 global.bond_maxMp = 25;
 global.bond_mp = global.bond_maxMp;
+global.bond_damageNum = global.verdali_damageNum * 2;
 
 // Variables for Chaos state
 global.chaos_hp = 10;

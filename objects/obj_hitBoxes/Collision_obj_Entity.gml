@@ -21,6 +21,5 @@ with (other) {
 }
 
 ds_list_add(hitObjects, other);
-show_debug_message(other.hitPoints);
 
 
