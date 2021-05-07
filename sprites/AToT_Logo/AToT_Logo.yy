@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "MainMenu",
-    "path": "folders/Sprites/MainMenu.yy",
+    "path": "folders/Sprites/Background/MainMenu.yy",
   },
   "resourceVersion": "1.0",
   "name": "AToT_Logo",

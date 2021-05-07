@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"50083991-9b07-49d4-9f25-59a86daf4247","path":"sprites/Hills_BG/Hills_BG.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"50083991-9b07-49d4-9f25-59a86daf4247","path":"sprites/Hills_BG/Hills_BG.yy",},"LayerId":{"name":"60e6054e-7444-45d9-b76c-99e7075573b2","path":"sprites/Hills_BG/Hills_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"50083991-9b07-49d4-9f25-59a86daf4247","path":"sprites/Hills_BG/Hills_BG.yy",},"LayerId":{"name":"7b85f2f3-ad66-4ff5-ba6f-0f414fc3c1c2","path":"sprites/Hills_BG/Hills_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"Hills_BG","path":"sprites/Hills_BG/Hills_BG.yy",},"resourceVersion":"1.0","name":"50083991-9b07-49d4-9f25-59a86daf4247","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,12 +66,13 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"7b85f2f3-ad66-4ff5-ba6f-0f414fc3c1c2","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"60e6054e-7444-45d9-b76c-99e7075573b2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "MainMenu",
-    "path": "folders/Sprites/MainMenu.yy",
+    "name": "Battleground",
+    "path": "folders/Sprites/Background/Battleground.yy",
   },
   "resourceVersion": "1.0",
   "name": "Hills_BG",

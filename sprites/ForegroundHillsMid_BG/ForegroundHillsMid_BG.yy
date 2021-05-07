@@ -9,7 +9,7 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 639,
-  "bbox_top": 318,
+  "bbox_top": 316,
   "bbox_bottom": 479,
   "HTile": false,
   "VTile": false,
@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"19a421d9-7d03-44f4-91ed-66c10ec0d3fb","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"19a421d9-7d03-44f4-91ed-66c10ec0d3fb","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"LayerId":{"name":"22ff7114-b791-4f9f-a6b7-3a732a060a9c","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"19a421d9-7d03-44f4-91ed-66c10ec0d3fb","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"LayerId":{"name":"e2203b4c-5dc7-49bf-a2a2-47e7f3726339","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"ForegroundHillsMid_BG","path":"sprites/ForegroundHillsMid_BG/ForegroundHillsMid_BG.yy",},"resourceVersion":"1.0","name":"19a421d9-7d03-44f4-91ed-66c10ec0d3fb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -66,11 +67,12 @@
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"22ff7114-b791-4f9f-a6b7-3a732a060a9c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"e2203b4c-5dc7-49bf-a2a2-47e7f3726339","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "MainMenu",
-    "path": "folders/Sprites/MainMenu.yy",
+    "name": "Battleground",
+    "path": "folders/Sprites/Background/Battleground.yy",
   },
   "resourceVersion": "1.0",
   "name": "ForegroundHillsMid_BG",

@@ -37,3 +37,17 @@ shake_remain = max(0, shake_remain - ((1 / shake_length) * shake_magnitude));
 
 // update camera view
 camera_set_view_pos(cam, x - view_w_half, y - view_h_half);
+
+// Parallax Effect
+if (layer_exists("Hill")) {
+	layer_x("Hill", x/3);
+}
+if (layer_exists("Foreground_Hill")) {
+	layer_x("Foreground_Hill", x/2);
+}
+if (layer_exists("Sky")) {
+	layer_x("Sky", x/5);
+}
+if (layer_exists("Mountain")) {
+	layer_x("Mountain", x/4);
+}

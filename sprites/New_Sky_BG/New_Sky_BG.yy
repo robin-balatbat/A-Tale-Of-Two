@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "MainMenu",
-    "path": "folders/Sprites/MainMenu.yy",
+    "name": "Battleground",
+    "path": "folders/Sprites/Background/Battleground.yy",
   },
   "resourceVersion": "1.0",
   "name": "New_Sky_BG",
