@@ -105,7 +105,7 @@ if (state == "Move") {
 		
 	// magic projectile attack
 	if (input.key_magic && global.bond_mp > 0) {
-		spawnProjectile(4, 30, obj_Magic_Blast,self);
+		state = "Magic";
 		
 	}
 	
@@ -197,6 +197,20 @@ switch (state) {
 			makeHitBox(spr_Bond_Attack_Mask, self, 2, 4, global.bond_damageNum, image_xscale);
 		}
 				
+		if (animationEnd()) {
+			state = "Move";
+			image_index = 0;
+		}
+		break;
+	#endregion
+	#region Magic
+	case "Magic":
+		changeSprite(0.6, spr_Bond_Cast);
+		
+		if (animationHitFrame(4)) {
+			spawnProjectile(28, 12, obj_Bond_Magic, self);
+		}
+		
 		if (animationEnd()) {
 			state = "Move";
 			image_index = 0;

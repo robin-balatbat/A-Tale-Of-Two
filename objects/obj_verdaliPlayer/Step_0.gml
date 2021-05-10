@@ -104,7 +104,7 @@ if (!instance_exists(obj_chaosPlayer) && !chaosSpawned) {
 		
 		// magic projectile attack limit attack based on mp
 		if (input.key_magic && global.verdali_mp > 0) {
-			spawnProjectile(4, 30, obj_Magic_Blast, self);	
+			state = "Magic";
 		}
 		
 		// change to attacking state
@@ -201,6 +201,20 @@ switch (state) {
 	
 		if (animationHitFrame(2)) {
 			makeHitBox(spr_Verdali_Attack2_Mask, self, 2, 4, global.verdali_damageNum, image_xscale);
+		}
+		
+		if (animationEnd()) {
+			state = "Move";
+			image_index = 0;
+		}
+		break;
+	#endregion
+	#region Magic
+	case "Magic":
+		changeSprite(0.6, spr_Verdali_Cast);
+		
+		if (animationHitFrame(3)) {
+			spawnProjectile(30, 31, obj_Magic_Blast, self);
 		}
 		
 		if (animationEnd()) {
