@@ -101,12 +101,13 @@ if (hDir == 0 && vDir == 0 && !returning) {
 	changeSprite(0.2, spr_Chaos_Idle);
 }
 
-// destroy instance once within range
+// destroy instance once within range, also hide layer
 if (returning) {
 	screenShake(1, 10);
 	if (distance_to_object(obj_verdaliPlayer) < destroy_range) {
 		screenShake(2, 10);
 		global.current_state = PlayerState.Verdali;
+		layer_set_visible(corruption_layer, false);
 		instance_destroy();
 	}
 }

@@ -1,7 +1,13 @@
 /// @description Initialize variables
 
+// set corruption layer visible
+corruption_layer = layer_get_id("Corruption");
+layer_set_visible(corruption_layer, true);
+
+// set proper variables
 global.current_state = PlayerState.Chaos;
 global.chaos_mp = global.chaos_maxMp;
+global.chaos_hp = global.chaos_maxHp;
 
 // dependency for getting player input
 // input object should already exist when Chaos is spawned
@@ -24,3 +30,6 @@ destroy_range = 10;
 
 // magic attack
 projSpeed = 30;
+
+// flashing for hit
+flash = 0;
