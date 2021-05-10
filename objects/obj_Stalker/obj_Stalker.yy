@@ -40,8 +40,8 @@
     {"propertyId":{"name":"damage","path":"objects/obj_Enemy/obj_Enemy.yy",},"objectId":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Enemies",
-    "path": "folders/Objects/Enemies.yy",
+    "name": "Stalker",
+    "path": "folders/Objects/Enemies/Stalker.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_Stalker",

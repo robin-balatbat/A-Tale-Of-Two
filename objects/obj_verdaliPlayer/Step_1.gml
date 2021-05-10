@@ -1,4 +1,5 @@
 /// @description Death
 if (global.verdali_hp <= 0) {
-	image_yscale = -1;
+	state = "Respawn";
+	global.verdali_hp = global.verdali_maxHp;
 }

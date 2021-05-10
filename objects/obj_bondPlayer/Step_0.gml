@@ -209,5 +209,12 @@ switch (state) {
 		transform(obj_verdaliPlayer);
 		break;
 	#endregion
+	#region Respawn
+	case "Respawn":
+		// Add in Death Animation, then destroy move into animationEnd()
+		instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
+		instance_destroy();
+		break;
+	#endregion
 }
 #endregion
