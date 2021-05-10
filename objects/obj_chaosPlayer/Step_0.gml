@@ -97,7 +97,7 @@ switch(dir) {
 		break;
 }
 
-if (hDir == 0 && vDir == 0) {
+if (hDir == 0 && vDir == 0 && !returning) {
 	changeSprite(0.2, spr_Chaos_Idle);
 }
 

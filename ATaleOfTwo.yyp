@@ -107,8 +107,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_Battleground1","path":"rooms/rm_Battleground1/rm_Battleground1.yy",},},
     {"roomId":{"name":"testRoom","path":"rooms/testRoom/testRoom.yy",},},
+    {"roomId":{"name":"rm_Battleground1","path":"rooms/rm_Battleground1/rm_Battleground1.yy",},},
     {"roomId":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},},
     {"roomId":{"name":"rm_Battleground2","path":"rooms/rm_Battleground2/rm_Battleground2.yy",},},
     {"roomId":{"name":"rm_Battleground3","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},},
