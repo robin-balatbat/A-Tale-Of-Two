@@ -111,5 +111,13 @@ switch (state) {
 			state = "Chase";
 		}
 		
+		if (animationEnd()) {
+			state = "Chase";
+			image_index = 0;
+		}
+		
+		break;
+		
+	case "Hurt":
 		break;
 }

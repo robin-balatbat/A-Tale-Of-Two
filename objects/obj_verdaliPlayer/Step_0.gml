@@ -247,5 +247,10 @@ switch (state) {
 		instance_destroy();
 		break;
 	#endregion
+	#region Hurt
+	case "Hurt":
+		changeSprite(0.5, spr_Verdali_Hurt);
+		break;
+	#endregion
 }
 #endregion
