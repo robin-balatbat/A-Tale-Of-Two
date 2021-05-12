@@ -6,6 +6,8 @@ if ((creator == noone) || (creator == other) || (ds_list_find_index(hitObjects, 
 with (other) {
 	EnemyHit(other.damage, 3);
 	hitFrom = other.direction;
+	state = "Hurt";
+	knockback_speed = other.knockback * other.image_xscale;
 	
 	// increase magic points based on current form
 	if (global.current_state == PlayerState.Verdali) {

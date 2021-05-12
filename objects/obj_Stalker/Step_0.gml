@@ -11,13 +11,13 @@ switch (state) {
 		changeSprite(1, spr_Stalker_Attack);
 		// hitboxes
 		if (animationHitFrame(5)) {
-			makeHitBox(spr_Stalker_Attack_Mask, self, 2, 4, damage, image_xscale);
+			makeHitBox(spr_Stalker_Attack_Mask, self, 3, 4, damage, image_xscale);
 		}
 		break;
 	#endregion
 	#region Hurt
 	case "Hurt":
-		changeSprite(0.5, spr_Stalker_Hurt);
+		knockback_state(spr_Stalker_Hurt, "Chase");
 		break;
 	#endregion
 	#region Regular Movement

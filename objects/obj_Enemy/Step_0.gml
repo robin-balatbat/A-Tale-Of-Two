@@ -2,6 +2,7 @@
 
 switch (state) {
 	
+	#region Idle
 	case "Idle":
 		// check placement
 		onGround = place_meeting(x, y + 1, obj_testWall);
@@ -32,7 +33,8 @@ switch (state) {
 		hsp = 0;
 	
 		break;
-	
+	#endregion
+	#region Wander
 	case "Wander":
 		// check placement
 		onGround = place_meeting(x, y + 1, obj_testWall);
@@ -72,7 +74,8 @@ switch (state) {
 		}
 		
 		break;
-		
+	#endregion
+	#region Chase
 	case "Chase":
 	
 		onGround = place_meeting(x, y + 1, obj_testWall);
@@ -101,7 +104,8 @@ switch (state) {
 		}
 		
 		break;
-		
+	#endregion
+	#region Attack
 	case "Attack":
 		
 		// handle the case when enemy falls off ledge
@@ -117,7 +121,10 @@ switch (state) {
 		}
 		
 		break;
-		
+	#endregion	
+	#region Hurt
 	case "Hurt":
+		// handled in each enemy due to specific animations
 		break;
+	#endregion
 }

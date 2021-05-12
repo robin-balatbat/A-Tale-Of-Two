@@ -187,7 +187,7 @@ switch (state) {
 		changeSprite(0.5, spr_Verdali_Attack1);
 		// hitboxes
 		if (animationHitFrame(2)) {
-			makeHitBox(spr_V_NewAttackMask, self, 2, 4, global.verdali_damageNum, image_xscale);
+			makeHitBox(spr_V_NewAttackMask, self, 3, 4, global.verdali_damageNum, image_xscale);
 		}
 				
 		if (animationEnd()) {
@@ -200,7 +200,7 @@ switch (state) {
 		changeSprite(0.5, spr_Verdali_Attack2);
 	
 		if (animationHitFrame(2)) {
-			makeHitBox(spr_Verdali_Attack2_Mask, self, 2, 4, global.verdali_damageNum, image_xscale);
+			makeHitBox(spr_Verdali_Attack2_Mask, self, 4, 4, global.verdali_damageNum, image_xscale);
 		}
 		
 		if (animationEnd()) {
@@ -249,7 +249,7 @@ switch (state) {
 	#endregion
 	#region Hurt
 	case "Hurt":
-		changeSprite(0.5, spr_Verdali_Hurt);
+		knockback_state(spr_Verdali_Hurt, "Move")
 		break;
 	#endregion
 }

@@ -232,7 +232,7 @@ switch (state) {
 	#endregion
 	#region "Hurt"
 	case "Hurt":
-		changeSprite(0.5, spr_Bond_Hurt);
+		knockback_state(spr_Bond_Hurt, "Move");
 		break;
 	#endregion
 }
