@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_respawnPoint",
-    "path": "sprites/spr_respawnPoint/spr_respawnPoint.yy",
+    "name": "spr_Door",
+    "path": "sprites/spr_Door/spr_Door.yy",
   },
   "solid": false,
   "visible": true,
