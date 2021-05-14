@@ -28,6 +28,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"damage","path":"objects/obj_magic/obj_magic.yy",},"objectId":{"name":"obj_magic","path":"objects/obj_magic/obj_magic.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"mpCost","path":"objects/obj_magic/obj_magic.yy",},"objectId":{"name":"obj_magic","path":"objects/obj_magic/obj_magic.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"knockback","path":"objects/obj_magic/obj_magic.yy",},"objectId":{"name":"obj_magic","path":"objects/obj_magic/obj_magic.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Projectiles",
