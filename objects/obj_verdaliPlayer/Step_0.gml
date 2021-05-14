@@ -242,9 +242,11 @@ switch (state) {
 	#endregion
 	#region Respawn
 	case "Respawn":
-		// Add in Death Animation, then destroy move into animationEnd()
-		instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
-		instance_destroy();
+		changeSprite(0.5, spr_Verdali_Death);
+		if (animationEnd()){
+			instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
+			instance_destroy();
+		}
 		break;
 	#endregion
 	#region Hurt
