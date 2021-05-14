@@ -1,8 +1,9 @@
 /// @description Initialize variables
 
-// set corruption layer visible
+// set corruption layer visible and activate
 corruption_layer = layer_get_id("Corruption");
 layer_set_visible(corruption_layer, true);
+instance_activate_layer(corruption_layer);
 
 // set proper variables
 global.current_state = PlayerState.Chaos;
@@ -28,8 +29,12 @@ returning = false;
 return_speed = 5;
 destroy_range = 10;
 
+// movement
+state = "Move";
+
 // magic attack
 projSpeed = 30;
 
 // flashing for hit
 flash = 0;
+knockback_speed = 0;
