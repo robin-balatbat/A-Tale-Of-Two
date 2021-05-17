@@ -219,15 +219,28 @@ switch (state) {
 	#endregion
 	#region Transform
 	case "Transform":
+		// set corruption invisible
+		layer_set_visible(corruption_layer, false);
+		instance_deactivate_layer(corruption_layer);
+		
+		// change sprite and controls
 		changeSprite(0.3, spr_Bond_Transform);
 		transform(obj_verdaliPlayer);
 		break;
 	#endregion
 	#region Respawn
 	case "Respawn":
-		// Add in Death Animation, then destroy move into animationEnd()
-		instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
-		instance_destroy();
+		
+		// deactivate corruption
+		layer_set_visible(corruption_layer, false);
+		instance_deactivate_layer(corruption_layer);
+		
+		// respawn the player
+		changeSprite(0.6, spr_Bond_Death);
+		if (animationEnd()){
+			instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
+			instance_destroy();
+		}
 		break;
 	#endregion
 	#region "Hurt"

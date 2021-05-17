@@ -9,6 +9,7 @@
     {"id":{"name":"spr_Bond_Dash","path":"sprites/spr_Bond_Dash/spr_Bond_Dash.yy",},"order":6,},
     {"id":{"name":"ts_Battleground","path":"tilesets/ts_Battleground/ts_Battleground.yy",},"order":0,},
     {"id":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},"order":1,},
+    {"id":{"name":"spr_Bond_Death","path":"sprites/spr_Bond_Death/spr_Bond_Death.yy",},"order":13,},
     {"id":{"name":"spr_Verdali_Chaos","path":"sprites/spr_Verdali_Chaos/spr_Verdali_Chaos.yy",},"order":13,},
     {"id":{"name":"spr_Bond_Cast","path":"sprites/spr_Bond_Cast/spr_Bond_Cast.yy",},"order":11,},
     {"id":{"name":"spr_Bond_Walk","path":"sprites/spr_Bond_Walk/spr_Bond_Walk.yy",},"order":2,},

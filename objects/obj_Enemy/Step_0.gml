@@ -1,5 +1,5 @@
 /// @description Basic movement
-
+	
 switch (state) {
 	
 	#region Idle
@@ -26,6 +26,7 @@ switch (state) {
 			}
 		}
 		
+		// transition to chase if player in range
 		if ((distance_to_object(getPlayerStateObj()) < chaseRange) && (global.current_state != PlayerState.Chaos)) {
 			state = "Chase";
 		}
@@ -59,6 +60,7 @@ switch (state) {
 			}
 		}
 		
+		// change to chase state
 		if (distance_to_object(getPlayerStateObj()) < chaseRange && (global.current_state != PlayerState.Chaos)) {
 			state = "Chase";
 		}
@@ -92,9 +94,11 @@ switch (state) {
 		collisions(obj_testWall);
 		
 		// transitions
+		
+		// attack and wander transitions
 		if (distance_to_object(getPlayerStateObj()) > chaseRange) {
 			state = "Wander";
-		} else if (distance_to_object(getPlayerStateObj()) <= attackRange && (global.current_state != PlayerState.Chaos)) {
+		} else if (distance_to_object(getPlayerStateObj()) <= attackRange) { // && globalstate != chaos
 			state = "Attack";
 		}
 		
@@ -107,7 +111,7 @@ switch (state) {
 	#endregion
 	#region Attack
 	case "Attack":
-		
+			
 		// handle the case when enemy falls off ledge
 		onGround = place_meeting(x, y + 1, obj_testWall);
 		
@@ -128,3 +132,4 @@ switch (state) {
 		break;
 	#endregion
 }
+

@@ -2,6 +2,11 @@
 
 global.current_state = PlayerState.Bond;
 
+// set corruption layer visible and activate
+corruption_layer = layer_get_id("Corruption");
+layer_set_visible(corruption_layer, true);
+instance_activate_layer(corruption_layer);
+
 // Getting input for player
 input = instance_create_layer(0, 0, "Instances", obj_input);
 

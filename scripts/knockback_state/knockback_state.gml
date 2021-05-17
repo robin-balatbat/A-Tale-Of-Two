@@ -6,6 +6,11 @@ function knockback_state(sprite, nextState){
 	// apply the speed and check for collisions
 	knockback_speed = approach(knockback_speed, 0, 0.1);
 	hsp = knockback_speed;
+	if (!onGround) {
+		vsp = knockback_speed;
+	} else {
+		vsp = 0;
+	}
 	collisions(obj_testWall);
 	
 	// adjust the xscale
