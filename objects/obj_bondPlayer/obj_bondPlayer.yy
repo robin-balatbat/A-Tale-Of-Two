@@ -9,7 +9,7 @@
     "name": "spr_Bond_Mask",
     "path": "sprites/spr_Bond_Mask/spr_Bond_Mask.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": {
     "name": "obj_Players",
     "path": "objects/obj_Players/obj_Players.yy",

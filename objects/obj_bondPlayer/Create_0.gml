@@ -1,4 +1,5 @@
 /// @description Variables for Bond state movement
+event_inherited();
 
 global.current_state = PlayerState.Bond;
 

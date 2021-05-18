@@ -9,7 +9,7 @@
     "name": "spr_Verdali_Mask",
     "path": "sprites/spr_Verdali_Mask/spr_Verdali_Mask.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": {
     "name": "obj_Players",
     "path": "objects/obj_Players/obj_Players.yy",

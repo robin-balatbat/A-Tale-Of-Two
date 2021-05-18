@@ -1,9 +1,16 @@
 /// @description Bond state movements and key inputs
 
+
 // check key input
 key_changeForm = keyboard_check_pressed(ord("X"));
 
 if (state == "Move") {
+	// set the layer visible
+	// set corruption layer visible and activate
+	corruption_layer = layer_get_id("Corruption");
+	layer_set_visible(corruption_layer, true);
+	instance_activate_layer(corruption_layer);
+
 	#region setup calculations
 	// get direction movement
 	move_dir = input.key_right - input.key_left;
