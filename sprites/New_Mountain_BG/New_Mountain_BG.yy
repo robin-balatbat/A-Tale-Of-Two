@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"5fa933fa-bed3-4e3b-986e-7c9061a3ce7c","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5fa933fa-bed3-4e3b-986e-7c9061a3ce7c","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"LayerId":{"name":"7a50d329-f100-4c93-b10c-352ce91ee725","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"5fa933fa-bed3-4e3b-986e-7c9061a3ce7c","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"LayerId":{"name":"43da39cd-8440-4360-b7d7-c691647c1a3a","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"5fa933fa-bed3-4e3b-986e-7c9061a3ce7c","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"LayerId":{"name":"7a50d329-f100-4c93-b10c-352ce91ee725","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"New_Mountain_BG","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"resourceVersion":"1.0","name":"5fa933fa-bed3-4e3b-986e-7c9061a3ce7c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
