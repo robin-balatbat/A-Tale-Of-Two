@@ -11,6 +11,7 @@ global.current_state = PlayerState.Verdali;
 global.coins = 0;
 global.max_lives = 3;
 global.myLives = global.max_lives;
+global.recoverCount = 0;
 
 // Variables for Verdali state
 global.verdali_maxHp = 25;

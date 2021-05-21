@@ -46,6 +46,3 @@ projSpeed = 25;
 // for getting hurt
 flash = 0;
 knockback_speed = 0;
-
-// for using recovery items
-recoverCount = 0;

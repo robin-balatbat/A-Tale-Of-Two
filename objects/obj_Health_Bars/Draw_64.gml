@@ -1,5 +1,7 @@
 /// @description draw Health bars
 
+// only draw this while the player is alive
+if (global.myLives > 0){
 // draw black background
 draw_sprite_ext(spr_Pixel, 0, 10, 10, 175, 180, 0, c_black, 0.3);
 
@@ -56,8 +58,8 @@ draw_text(lives_x, lives_y, "Lives: " + string(global.myLives));
 draw_set_color(c_white);
 
 // draw amount of health potions needed
-var recoverItem = getPlayerStateObj().recoverCount;
-if (recoverItem > 0) {
+if (global.recoverCount > 0) {
 	draw_sprite_ext(spr_Potion, 1, potion_x, potion_y, 1, 1, 0, c_white, 1);
-	draw_text(50, potion_y + 5, ": " + string(recoverItem));
+	draw_text(50, potion_y + 5, ": " + string(global.recoverCount));
+}
 }

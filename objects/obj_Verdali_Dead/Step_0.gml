@@ -31,7 +31,20 @@ if (!done) {
 	
 }
 // respawn the player once the death animation is complete
-else {
+else if (global.myLives > 0) {
 	instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
 	instance_destroy();
+}
+// restart the game if the player runs out of lives
+else if (global.myLives <= 0) {
+	if (input.key_recover) {
+		// reset all of the global variables
+		resetGlobals();
+		
+		global.recoverCount = 0;
+		global.myLives = global.max_lives;
+		global.coins = 0;
+		
+		game_restart();
+	}
 }
