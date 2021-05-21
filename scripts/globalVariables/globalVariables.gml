@@ -3,7 +3,8 @@
 enum PlayerState {
 	Verdali,
 	Bond,
-	Chaos
+	Chaos,
+	Dead
 }
 // global variables for all states
 global.current_state = PlayerState.Verdali;

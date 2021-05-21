@@ -6,6 +6,7 @@
     {"id":{"name":"spr_testBond","path":"sprites/spr_testBond/spr_testBond.yy",},"order":0,},
     {"id":{"name":"AToT_Border_Bg","path":"sprites/AToT_Border_Bg/AToT_Border_Bg.yy",},"order":0,},
     {"id":{"name":"spr_Bond_Wall","path":"sprites/spr_Bond_Wall/spr_Bond_Wall.yy",},"order":5,},
+    {"id":{"name":"obj_Verdali_Dead","path":"objects/obj_Verdali_Dead/obj_Verdali_Dead.yy",},"order":4,},
     {"id":{"name":"spr_Bond_Dash","path":"sprites/spr_Bond_Dash/spr_Bond_Dash.yy",},"order":6,},
     {"id":{"name":"ts_Battleground","path":"tilesets/ts_Battleground/ts_Battleground.yy",},"order":0,},
     {"id":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},"order":1,},

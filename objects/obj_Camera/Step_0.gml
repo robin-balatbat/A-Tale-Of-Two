@@ -13,6 +13,10 @@ switch (global.current_state) {
 	case PlayerState.Chaos:
 		follow = obj_chaosPlayer;
 		break;
+	
+	case PlayerState.Dead:
+		follow = obj_Verdali_Dead;
+		break;
 }
 
 // update destination

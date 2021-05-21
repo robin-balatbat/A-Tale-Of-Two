@@ -1,5 +1,6 @@
 /// @description Basic movement
-	
+
+
 switch (state) {
 	
 	#region Idle
@@ -132,4 +133,3 @@ switch (state) {
 		break;
 	#endregion
 }
-

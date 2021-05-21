@@ -9,5 +9,7 @@ function getPlayerStateObj(){
 	}
 	else if (global.current_state == PlayerState.Chaos) {
 		return obj_chaosPlayer;
+	} else if (global.current_state == PlayerState.Dead) {
+		return obj_Verdali_Dead;
 	}
 }

@@ -243,12 +243,18 @@ switch (state) {
 	#endregion
 	#region Respawn
 	case "Respawn":
-		// need to move this so the death animation is its own object so player not caught in death loop
-		changeSprite(0.5, spr_Verdali_Death);
-		if (animationEnd()){
-			instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
-			instance_destroy();
+		
+		with (instance_create_layer(x, y, "Player", obj_Verdali_Dead)) {
+			
+			hsp = lengthdir_x(1, other.image_xscale);
+			vsp = lengthdir_y(1, other.image_xscale);
+		
+			if (sign(hsp) != 0) {
+				image_xscale = sign(hsp);
+			}
+	
 		}
+		instance_destroy();
 		break;
 	#endregion
 	#region Hurt

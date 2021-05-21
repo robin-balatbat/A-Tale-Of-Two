@@ -247,9 +247,18 @@ switch (state) {
 		instance_deactivate_layer(corruption_layer);
 		
 		// respawn the player
-		changeSprite(0.6, spr_Bond_Death);
+		changeSprite(0.6, spr_Bond_Transform);
 		if (animationEnd()){
-			instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
+			with (instance_create_layer(x, y, "Player", obj_Verdali_Dead)) {
+			
+				hsp = lengthdir_x(1, other.image_xscale);
+				vsp = lengthdir_y(1, other.image_xscale);
+		
+				if (sign(hsp) != 0) {
+					image_xscale = sign(hsp);
+				}
+	
+			}
 			instance_destroy();
 		}
 		break;
