@@ -26,7 +26,7 @@ if (state == "Move") {
 	if (dashDuration > 0) {
 		vsp = 0;
 	}
-	else if (onWall != 0) {
+	else if (onWall != 0 && !onGround) {
 		vsp = min(vsp + 1, 5);
 	}
 	else {
@@ -78,7 +78,7 @@ if (state == "Move") {
 					jumped = true;
 				}
 		
-				if (onWall != 0) {
+				if (onWall != 0 && !onGround) {
 					image_xscale = onWall;
 					vsp = -jumpSpeed;
 					hsp = onWall * moveSpeed;
