@@ -1,4 +1,5 @@
 /// @description Set up camera
+randomize();
 if (!instance_exists(obj_verdaliPlayer)) {
 	instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
 }

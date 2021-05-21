@@ -20,9 +20,15 @@ switch (state) {
 		
 		// transitions
 		
+		// launch projectile if greater than the chasing range
+		//if (distance_to_object(getPlayerStateObj()) > attackRange && distance_to_object(getPlayerStateObj()) < chaseRange) {
+		//	state = "Projectile";
+		//}
+		
 		// attack transitions (randomly choose an attack to perform if player in range
 		if (distance_to_object(getPlayerStateObj()) <= attackRange) { // && globalstate != chaos
 			var change = choose(0,1,2);
+			show_debug_message(change);
 			switch (change) {
 				case 0:
 					state = "Attack1";
@@ -31,11 +37,6 @@ switch (state) {
 				case 2:
 					state = "Attack3";
 			}
-		}
-		
-		// launch projectile if greater than the chasing range
-		if (distance_to_object(getPlayerStateObj()) > chaseRange) {
-			state = "Projectile";
 		}
 		
 		break;

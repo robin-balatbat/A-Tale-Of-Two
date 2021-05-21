@@ -1,6 +1,5 @@
 /// @description Bond state movements and key inputs
 
-
 // check key input
 key_changeForm = keyboard_check_pressed(ord("X"));
 
@@ -215,7 +214,12 @@ switch (state) {
 		changeSprite(0.6, spr_Bond_Cast);
 		
 		if (animationHitFrame(4)) {
-			spawnProjectile(28, 12, obj_Bond_Magic, self);
+			if (image_xscale == 1) {
+				spawnProjectile(28, 12, obj_Bond_Magic, self);
+			} else if (image_xscale == -1) {
+				spawnProjectile(-28, 12, obj_Bond_Magic, self);
+			}
+			
 		}
 		
 		if (animationEnd()) {

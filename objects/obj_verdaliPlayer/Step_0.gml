@@ -209,7 +209,13 @@ switch (state) {
 		changeSprite(0.6, spr_Verdali_Cast);
 		
 		if (animationHitFrame(3)) {
-			spawnProjectile(30, 31, obj_Magic_Blast, self);
+			// offset the magic correctly to not hurt self
+			if (image_xscale == 1) {
+				spawnProjectile(30, 31, obj_Magic_Blast, self);
+			} else if (image_xscale == -1) {
+				spawnProjectile(-30, 31, obj_Magic_Blast, self);
+			}
+			
 		}
 		
 		if (animationEnd()) {

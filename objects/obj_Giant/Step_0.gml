@@ -11,7 +11,7 @@ switch (state) {
 		changeSprite(0.2, spr_Giant_Attack1);
 		// hitboxes
 		if (animationHitFrame(3)) {
-			makeHitBox(spr_Giant_Attack1_Mask, self, 3, 4, damage, image_xscale);
+			makeHitBox(spr_Giant_Attack1_Mask, self, 5, 4, damage, image_xscale);
 		}
 		break;
 	#endregion
@@ -20,7 +20,7 @@ switch (state) {
 		changeSprite(0.2, spr_Giant_Attack2);
 		// hitboxes
 		if (animationHitFrame(2)) {
-			makeHitBox(spr_Giant_Attack2_Mask, self, 3, 4, damage, image_xscale);
+			makeHitBox(spr_Giant_Attack2_Mask, self, 5, 4, damage, image_xscale);
 		}
 		break;
 	#endregion
@@ -29,7 +29,7 @@ switch (state) {
 		changeSprite(0.2, spr_Giant_Attack3);
 		// hitboxes
 		if (animationHitFrame(2)) {
-			makeHitBox(spr_Giant_Attack2_Mask, self, 3, 4, damage, image_xscale);
+			makeHitBox(spr_Giant_Attack2_Mask, self, 5, 4, damage, image_xscale);
 		}
 		
 		if (animationHitFrame(5)) {
@@ -42,7 +42,7 @@ switch (state) {
 		changeSprite(0.2, spr_Giant_Projectile);
 		// hitboxes
 		if (animationHitFrame(3)) {
-			spawnProjectile(-64, -9, obj_Bond_Magic, self);
+			spawnProjectile(-64, 9, obj_Bond_Magic, obj_Boss);
 		}
 		break;
 	#endregion
