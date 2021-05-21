@@ -37,3 +37,6 @@ healthbar_y = 20;
 
 magicbar_x = 20;
 magicbar_y = 64;
+
+coin_x = 20;
+coin_y = 120;

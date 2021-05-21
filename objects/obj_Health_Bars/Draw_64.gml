@@ -41,3 +41,8 @@ draw_sprite_stretched(spr_Bar_Border, 0, healthbar_x, healthbar_y, healthbar_wid
 draw_sprite_stretched(spr_Bar_BG, 0, magicbar_x, magicbar_y, magicbar_width, healthbar_height + 6);
 draw_sprite_stretched(spr_MP_Bar, 0, magicbar_x, magicbar_y + 2, (mpToTrack/mpMaxToTrack) * magicbar_width, healthbar_height);
 draw_sprite_stretched(spr_Bar_Border, 0, magicbar_x, magicbar_y, magicbar_width, healthbar_height + 6);
+
+// draw coins
+draw_set_font(Main_Font1);
+draw_text(coin_x, coin_y, "Coins: " + string(global.coins));
+draw_set_color(c_white);

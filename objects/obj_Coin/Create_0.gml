@@ -6,3 +6,4 @@ image_xscale = 0.5;
 image_yscale = 0.5;
 hsp = 0;
 vsp = 0;
+grv = 0.3;

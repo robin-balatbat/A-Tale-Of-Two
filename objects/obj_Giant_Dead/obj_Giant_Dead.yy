@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "spr_Transition",
-    "path": "sprites/spr_Transition/spr_Transition.yy",
+    "name": "spr_Giant_Dead",
+    "path": "sprites/spr_Giant_Dead/spr_Giant_Dead.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -21,17 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_Players","path":"objects/obj_Players/obj_Players.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Boss",
+    "path": "folders/Objects/Enemies/Boss.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_RoomTransitions",
+  "name": "obj_Giant_Dead",
   "tags": [],
   "resourceType": "GMObject",
 }
