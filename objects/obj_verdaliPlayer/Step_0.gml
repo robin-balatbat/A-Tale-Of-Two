@@ -115,6 +115,13 @@ if (state == "Move") {
 		}
 	}
 	#endregion
+	
+	#region recovery
+	if (recoverCount > 0 && input.key_recover) {
+		recoverCount--;
+		global.verdali_hp = global.verdali_maxHp;
+	}
+	#endregion
 		
 }
 

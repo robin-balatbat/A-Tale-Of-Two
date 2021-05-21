@@ -43,3 +43,6 @@ coin_y = 100;
 
 lives_x = 20;
 lives_y = 125;
+
+potion_x = 20;
+potion_y = 155;

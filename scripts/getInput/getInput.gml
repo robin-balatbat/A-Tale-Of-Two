@@ -25,4 +25,6 @@ function getInput(){
 	// melee attack
 	key_attack = keyboard_check_pressed(ord("F")) || mouse_check_button_pressed(mb_left);
 
+	// use the recovery item
+	key_recover = keyboard_check_pressed(ord("R"));
 }

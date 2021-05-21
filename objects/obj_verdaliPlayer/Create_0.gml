@@ -38,7 +38,7 @@ coyote_max = 6;
 jumped = true;
 
 // handling when Chaos is spawned
-chaosSpawned = false;
+//chaosSpawned = false;
 
 // projectile speed
 projSpeed = 25;
@@ -46,3 +46,6 @@ projSpeed = 25;
 // for getting hurt
 flash = 0;
 knockback_speed = 0;
+
+// for using recovery items
+recoverCount = 0;
