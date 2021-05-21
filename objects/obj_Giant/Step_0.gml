@@ -42,7 +42,12 @@ switch (state) {
 		changeSprite(0.2, spr_Giant_Projectile);
 		// hitboxes
 		if (animationHitFrame(3)) {
-			spawnProjectile(-64, 9, obj_Bond_Magic, obj_Boss);
+			if (image_xscale == 1) {
+				spawnProjectile(85, 9, obj_Giant_Magic, self);
+			} else if (image_xscale == -1) {
+				spawnProjectile(-85, 9, obj_Giant_Magic, self);
+			}
+			
 		}
 		break;
 	#endregion

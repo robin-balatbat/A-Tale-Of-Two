@@ -112,6 +112,7 @@
     {"id":{"name":"spr_Stalker_Mask","path":"sprites/spr_Stalker_Mask/spr_Stalker_Mask.yy",},"order":1,},
     {"id":{"name":"obj_Corruption","path":"objects/obj_Corruption/obj_Corruption.yy",},"order":1,},
     {"id":{"name":"spr_testMagic","path":"sprites/spr_testMagic/spr_testMagic.yy",},"order":4,},
+    {"id":{"name":"obj_Giant_Magic","path":"objects/obj_Giant_Magic/obj_Giant_Magic.yy",},"order":3,},
     {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},"order":3,},
     {"id":{"name":"spr_Bond_Air","path":"sprites/spr_Bond_Air/spr_Bond_Air.yy",},"order":4,},
     {"id":{"name":"sh_hitFlash","path":"shaders/sh_hitFlash/sh_hitFlash.yy",},"order":0,},
