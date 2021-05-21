@@ -32,6 +32,7 @@ if (!done) {
 }
 // respawn the player once the death animation is complete
 else if (global.myLives > 0) {
+	instance_create_depth(x, y, -9999, obj_Fade);
 	instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
 	instance_destroy();
 }

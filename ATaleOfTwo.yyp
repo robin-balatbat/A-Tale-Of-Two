@@ -113,6 +113,7 @@
     {"id":{"name":"Hills_BG","path":"sprites/Hills_BG/Hills_BG.yy",},"order":1,},
     {"id":{"name":"spr_Verdali_Death","path":"sprites/spr_Verdali_Death/spr_Verdali_Death.yy",},"order":12,},
     {"id":{"name":"obj_Giant","path":"objects/obj_Giant/obj_Giant.yy",},"order":0,},
+    {"id":{"name":"obj_Fade","path":"objects/obj_Fade/obj_Fade.yy",},"order":2,},
     {"id":{"name":"resetGlobals","path":"scripts/resetGlobals/resetGlobals.yy",},"order":22,},
     {"id":{"name":"spr_Giant_Attack2_Mask","path":"sprites/spr_Giant_Attack2_Mask/spr_Giant_Attack2_Mask.yy",},"order":2,},
     {"id":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"order":0,},
