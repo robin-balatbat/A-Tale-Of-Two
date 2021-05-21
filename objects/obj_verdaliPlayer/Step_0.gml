@@ -243,6 +243,7 @@ switch (state) {
 	#endregion
 	#region Respawn
 	case "Respawn":
+		// need to move this so the death animation is its own object so player not caught in death loop
 		changeSprite(0.5, spr_Verdali_Death);
 		if (animationEnd()){
 			instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);

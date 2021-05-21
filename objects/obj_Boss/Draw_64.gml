@@ -1,6 +1,6 @@
-/// @description Draw Boss Healthbar
+/// @description Draw Boss Healthbar bottom of screen
 
-// draw health bar below enemy
+// draw health bar below boss
 if (hitPoints <= maxHP) {
-	draw_healthbar(x - 100, y + 80, x + 100, y + 120, (hitPoints / maxHP) * 100, c_black, c_red, c_green, 0, true, true);
+	draw_healthbar((room_width/2) - 200, room_height - 40, (room_width/2) + 200, room_height - 80, (hitPoints / maxHP) * 100, c_black, c_red, c_green, 0, true, true);
 }
