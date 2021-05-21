@@ -9,6 +9,8 @@ enum PlayerState {
 // global variables for all states
 global.current_state = PlayerState.Verdali;
 global.coins = 0;
+global.max_lives = 3;
+global.myLives = global.max_lives;
 
 // Variables for Verdali state
 global.verdali_maxHp = 25;

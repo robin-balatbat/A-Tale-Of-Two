@@ -39,4 +39,7 @@ magicbar_x = 20;
 magicbar_y = 64;
 
 coin_x = 20;
-coin_y = 120;
+coin_y = 100;
+
+lives_x = 20;
+lives_y = 125;

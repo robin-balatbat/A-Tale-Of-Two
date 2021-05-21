@@ -1,5 +1,8 @@
 /// @description draw Health bars
 
+// draw black background
+draw_sprite_ext(spr_Pixel, 0, 10, 10, 175, 150, 0, c_black, 0.3);
+
 // update which health bar to draw
 if (global.current_state == PlayerState.Verdali) {
 	// health
@@ -45,4 +48,9 @@ draw_sprite_stretched(spr_Bar_Border, 0, magicbar_x, magicbar_y, magicbar_width,
 // draw coins
 draw_set_font(Main_Font1);
 draw_text(coin_x, coin_y, "Coins: " + string(global.coins));
+draw_set_color(c_white);
+
+// draw lives left
+draw_set_font(Main_Font1);
+draw_text(lives_x, lives_y, "Lives: " + string(global.myLives));
 draw_set_color(c_white);
