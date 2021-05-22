@@ -27,3 +27,7 @@ for (var i = 0; i < menu_items; i++) {
 	draw_set_color(col);
 	draw_text(xx, yy, txt);
 }
+
+draw_set_color(c_white);
+draw_text(menu_x_target - 100, menu_y - (menu_itemheight * 7 * 1.5), "A Tale of Two");
+draw_text(menu_x_target - 70, menu_y - (menu_itemheight * 6 * 1.5), "By Robin Balatbat");

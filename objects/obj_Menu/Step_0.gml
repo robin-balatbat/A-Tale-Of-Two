@@ -19,7 +19,7 @@ if (menu_control) {
 	}
 	
 	if (keyboard_check_pressed(vk_enter)) {
-		menu_x_target = gui_width + 200;
+		menu_x_target = gui_width + 500;
 		menu_committed = menu_cursor;
 		menu_control = false;
 	}
