@@ -53,13 +53,12 @@ draw_text(coin_x, coin_y, "Coins: " + string(global.coins));
 draw_set_color(c_white);
 
 // draw lives left
-draw_set_font(Main_Font1);
 draw_text(lives_x, lives_y, "Lives: " + string(global.myLives));
 draw_set_color(c_white);
 
 // draw amount of health potions needed
 if (global.recoverCount > 0) {
 	draw_sprite_ext(spr_Potion, 1, potion_x, potion_y, 1, 1, 0, c_white, 1);
-	draw_text(50, potion_y + 5, ": " + string(global.recoverCount));
+	draw_text(potion_x + 60, potion_y + 35, ": " + string(global.recoverCount));
 }
 }
