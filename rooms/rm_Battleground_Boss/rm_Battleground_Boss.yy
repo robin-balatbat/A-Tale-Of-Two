@@ -26,6 +26,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_RoomTransitions","path":"objects/obj_RoomTransitions/obj_RoomTransitions.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":-32.0,"resourceVersion":"1.0","name":"inst_7A109D0B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_BossDoor","path":"objects/obj_BossDoor/obj_BossDoor.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":608.0,"resourceVersion":"1.0","name":"inst_2CD03795","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_EndRoomTransition","path":"objects/obj_EndRoomTransition/obj_EndRoomTransition.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1248.0,"y":512.0,"resourceVersion":"1.0","name":"inst_7454430C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Potion","path":"objects/obj_Potion/obj_Potion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":448.0,"y":576.0,"resourceVersion":"1.0","name":"inst_287C572D","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Corruption","path":"objects/obj_Corruption/obj_Corruption.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":{"name":"inst_41B0E516","path":"rooms/rm_Battleground1/rm_Battleground1.yy",},"frozen":false,"ignore":false,"inheritItemSettings":false,"x":544.0,"y":448.0,"resourceVersion":"1.0","name":"inst_41B0E516","tags":[],"resourceType":"GMRInstance",},
@@ -95,6 +96,7 @@
     {"name":"inst_AA56235","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
     {"name":"inst_2CD03795","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
     {"name":"inst_7454430C","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
+    {"name":"inst_287C572D","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -105,7 +107,7 @@
     "persistent": false,
   },
   "viewSettings": {
-    "inheritViewSettings": false,
+    "inheritViewSettings": true,
     "enableViews": true,
     "clearViewBackground": false,
     "clearDisplayBuffer": true,

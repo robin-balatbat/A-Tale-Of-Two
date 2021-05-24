@@ -2,7 +2,7 @@
 
 image_xscale = -image_xscale;
 
-global.bond_hp--;
+global.bond_hp-=10;
 
 with (other) {
 	flash = 3;

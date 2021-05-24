@@ -37,6 +37,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_RoomTransitions","path":"objects/obj_RoomTransitions/obj_RoomTransitions.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-32.0,"y":512.0,"resourceVersion":"1.0","name":"inst_3D71F002","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Door","path":"objects/obj_Door/obj_Door.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":160.0,"resourceVersion":"1.0","name":"inst_4E30F078","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Switch","path":"objects/obj_Switch/obj_Switch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":96.0,"resourceVersion":"1.0","name":"inst_2650E929","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_Potion","path":"objects/obj_Potion/obj_Potion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":544.0,"resourceVersion":"1.0","name":"inst_30E84581","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":300,"userdefinedDepth":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Corruption","path":"objects/obj_Corruption/obj_Corruption.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":832.0,"y":160.0,"resourceVersion":"1.0","name":"inst_134423B8","tags":[],"resourceType":"GMRInstance",},
@@ -141,6 +142,7 @@
     {"name":"inst_58CBE7AB","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},
     {"name":"inst_134423B8","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},
     {"name":"inst_12A88362","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},
+    {"name":"inst_30E84581","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},
   ],
   "inheritCreationOrder": true,
   "sequenceId": null,
