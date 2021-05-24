@@ -124,7 +124,7 @@ if (state == "Move") {
 	#region recovery
 	if (global.recoverCount > 0 && input.key_recover) {
 		global.recoverCount--;
-		global.verdali_hp = global.verdali_maxHp;
+		global.bond_hp = global.bond_maxHp;
 	}
 	#endregion
 }
