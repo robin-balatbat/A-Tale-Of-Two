@@ -27,16 +27,9 @@ if (menu_control) {
 
 if (menu_x > gui_width + 150 && menu_committed != -1) {
 	switch (menu_committed) {
-		case 2: default:
-			instance_create_depth(x, y, -9999, obj_Fade);
-			room_goto(rm_Battleground1);
-			break;
-		case 1:
-			instance_create_depth(x, y, -9999, obj_Fade);
-			room_goto(rm_Controls);
-			break;
 		case 0:
-			game_end();
+			instance_create_depth(x, y, -9999, obj_Fade);
+			room_goto(rm_MainMenu);
 			break;
 	}
 }

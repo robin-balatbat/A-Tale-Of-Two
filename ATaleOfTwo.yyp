@@ -119,6 +119,7 @@
     {"id":{"name":"obj_Giant","path":"objects/obj_Giant/obj_Giant.yy",},"order":0,},
     {"id":{"name":"obj_Fade","path":"objects/obj_Fade/obj_Fade.yy",},"order":2,},
     {"id":{"name":"resetGlobals","path":"scripts/resetGlobals/resetGlobals.yy",},"order":22,},
+    {"id":{"name":"rm_Controls","path":"rooms/rm_Controls/rm_Controls.yy",},"order":6,},
     {"id":{"name":"spr_Giant_Attack2_Mask","path":"sprites/spr_Giant_Attack2_Mask/spr_Giant_Attack2_Mask.yy",},"order":2,},
     {"id":{"name":"obj_Enemy","path":"objects/obj_Enemy/obj_Enemy.yy",},"order":0,},
     {"id":{"name":"spr_Stalker_Attack","path":"sprites/spr_Stalker_Attack/spr_Stalker_Attack.yy",},"order":3,},
@@ -133,6 +134,7 @@
     {"id":{"name":"playerHit","path":"scripts/playerHit/playerHit.yy",},"order":16,},
     {"id":{"name":"spr_Bond_Magic","path":"sprites/spr_Bond_Magic/spr_Bond_Magic.yy",},"order":1,},
     {"id":{"name":"New_Sky_BG","path":"sprites/New_Sky_BG/New_Sky_BG.yy",},"order":3,},
+    {"id":{"name":"obj_Controls","path":"objects/obj_Controls/obj_Controls.yy",},"order":26,},
     {"id":{"name":"getInput","path":"scripts/getInput/getInput.yy",},"order":1,},
     {"id":{"name":"spr_Stalker_Dead","path":"sprites/spr_Stalker_Dead/spr_Stalker_Dead.yy",},"order":5,},
     {"id":{"name":"spr_Verdali_Walk","path":"sprites/spr_Verdali_Walk/spr_Verdali_Walk.yy",},"order":1,},
@@ -170,6 +172,7 @@
     {"roomId":{"name":"rm_Battleground2","path":"rooms/rm_Battleground2/rm_Battleground2.yy",},},
     {"roomId":{"name":"rm_Battleground3","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},},
     {"roomId":{"name":"rm_Battleground_Boss","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},},
+    {"roomId":{"name":"rm_Controls","path":"rooms/rm_Controls/rm_Controls.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
