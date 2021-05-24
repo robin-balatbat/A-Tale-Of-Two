@@ -98,7 +98,6 @@
     {"id":{"name":"spr_Bond_Run","path":"sprites/spr_Bond_Run/spr_Bond_Run.yy",},"order":3,},
     {"id":{"name":"AToT_Border_Bg2","path":"sprites/AToT_Border_Bg2/AToT_Border_Bg2.yy",},"order":3,},
     {"id":{"name":"spr_Verdali_Attack2","path":"sprites/spr_Verdali_Attack2/spr_Verdali_Attack2.yy",},"order":9,},
-    {"id":{"name":"rm_GameComplete","path":"rooms/rm_GameComplete/rm_GameComplete.yy",},"order":6,},
     {"id":{"name":"obj_Giant_Dead","path":"objects/obj_Giant_Dead/obj_Giant_Dead.yy",},"order":1,},
     {"id":{"name":"EnemyHit","path":"scripts/EnemyHit/EnemyHit.yy",},"order":10,},
     {"id":{"name":"rm_Battleground1","path":"rooms/rm_Battleground1/rm_Battleground1.yy",},"order":2,},
@@ -171,7 +170,6 @@
     {"roomId":{"name":"rm_Battleground2","path":"rooms/rm_Battleground2/rm_Battleground2.yy",},},
     {"roomId":{"name":"rm_Battleground3","path":"rooms/rm_Battleground3/rm_Battleground3.yy",},},
     {"roomId":{"name":"rm_Battleground_Boss","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},},
-    {"roomId":{"name":"rm_GameComplete","path":"rooms/rm_GameComplete/rm_GameComplete.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
