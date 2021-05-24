@@ -1,3 +1,3 @@
 targetRoom = rm_Battleground_Boss;
-targetX = 78;
-targetY = 100;
+targetX = 127;
+targetY = 500;
