@@ -73,12 +73,14 @@ if (state == "Move") {
 		if (jumpBuffer > 0) {
 			if (input.key_jump) {
 				if (onGround) {
+					audio_play_sound(snd_Jump, 10, false);
 					vsp = -jumpSpeed;
 					jumpBuffer = 0;
 					jumped = true;
 				}
 		
 				if (onWall != 0 && !onGround) {
+					audio_play_sound(snd_Jump, 10, false);
 					image_xscale = onWall;
 					vsp = -jumpSpeed;
 					hsp = onWall * moveSpeed;

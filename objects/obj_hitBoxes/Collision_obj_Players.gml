@@ -9,5 +9,5 @@ with (other) {
 	state = "Hurt";
 	knockback_speed = other.knockback * other.image_xscale;
 }
-
+audio_play_sound(choose(snd_Hit_Hurt1, snd_Hit_Hurt2, snd_Hit_Hurt3), 10, false);
 ds_list_add(hitObjects, other);
