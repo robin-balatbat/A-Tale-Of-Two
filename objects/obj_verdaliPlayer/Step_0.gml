@@ -108,11 +108,6 @@ if (state == "Move") {
 	if (input.key_attack) {
 		state = "Attack";
 			
-		// combo
-		if (input.key_attack && image_index >= 2){
-			image_index = 0;
-			state = "Attack Two";
-		}
 	}
 	#endregion
 	
@@ -190,6 +185,12 @@ switch (state) {
 		// hitboxes
 		if (animationHitFrame(2)) {
 			makeHitBox(spr_V_NewAttackMask, self, 3, 4, global.verdali_damageNum, image_xscale);
+		}
+		
+		// combo
+		if (input.key_attack && image_index >= 3){
+			image_index = 0;
+			state = "Attack Two";
 		}
 				
 		if (animationEnd()) {
