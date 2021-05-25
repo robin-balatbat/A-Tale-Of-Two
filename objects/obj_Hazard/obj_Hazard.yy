@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_testHazard",
-    "path": "sprites/spr_testHazard/spr_testHazard.yy",
+    "name": "spr_Spikes_strip4",
+    "path": "sprites/spr_Spikes_strip4/spr_Spikes_strip4.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,6 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_Players","path":"objects/obj_Players/obj_Players.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
