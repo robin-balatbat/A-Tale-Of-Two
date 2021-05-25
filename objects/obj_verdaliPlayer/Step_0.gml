@@ -60,7 +60,6 @@ if (state == "Move") {
 	if (jumpBuffer > 0) {
 		if (input.key_jump) {
 			if (onGround) {
-				audio_play_sound(snd_Jump, 10, false);
 				vsp = -jumpSpeed;
 				jumpBuffer = 0;
 				jumped = true;
@@ -116,6 +115,7 @@ if (state == "Move") {
 	if (global.recoverCount > 0 && input.key_recover) {
 		global.recoverCount--;
 		global.verdali_hp = global.verdali_maxHp;
+		audio_play_sound(snd_Pickup1, 5, false);
 	}
 	#endregion
 		
@@ -165,6 +165,10 @@ switch (state) {
 		} // on ground
 		else {
 			// idle
+			if (sprite_index = spr_Verdali_Air) {
+				audio_sound_pitch(snd_Jump, choose(0.8, 1.0, 1.2));
+				audio_play_sound(snd_Jump, 10, false);
+			}
 			if (hsp == 0) {
 				changeSprite(1, spr_Verdali);
 			}
@@ -175,6 +179,12 @@ switch (state) {
 			// running
 			else {
 				changeSprite(1, spr_Verdali_Run);
+			}
+			if (animationEnd()) {
+				if (sprite_index == spr_Verdali_Run) {
+					var sound = audio_play_sound(choose(snd_Footsteps1, snd_Footsteps2, snd_Footsteps3), 4, false);
+					audio_sound_pitch(sound, 0.15);
+				}
 			}
 
 		}

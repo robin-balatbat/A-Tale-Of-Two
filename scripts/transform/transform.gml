@@ -1,6 +1,7 @@
 // Script to transform between Verdali and Bonded form
 function transform(object){
-	
+	var sound = audio_play_sound(choose(snd_Transform, snd_Transform2), 3, false);
+	audio_sound_pitch(sound, choose(0.8, 1.2, 0.6));
 	// transform from one form to another
 	if (animationEnd()) {
 		// play animation, then transfer control

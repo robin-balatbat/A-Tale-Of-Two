@@ -73,14 +73,12 @@ if (state == "Move") {
 		if (jumpBuffer > 0) {
 			if (input.key_jump) {
 				if (onGround) {
-					audio_play_sound(snd_Jump, 10, false);
 					vsp = -jumpSpeed;
 					jumpBuffer = 0;
 					jumped = true;
 				}
 		
 				if (onWall != 0 && !onGround) {
-					audio_play_sound(snd_Jump, 10, false);
 					image_xscale = onWall;
 					vsp = -jumpSpeed;
 					hsp = onWall * moveSpeed;
@@ -127,6 +125,7 @@ if (state == "Move") {
 	if (global.recoverCount > 0 && input.key_recover) {
 		global.recoverCount--;
 		global.bond_hp = global.bond_maxHp;
+		audio_play_sound(snd_Pickup1, 5, false);
 	}
 	#endregion
 }
@@ -138,6 +137,10 @@ switch (state) {
 	case "Move":
 		if (!onGround) {
 			if (onWall != 0) {
+				if (sprite_index = spr_Bond_Air) {
+					audio_sound_pitch(snd_Jump, choose(0.8, 1.0, 1.2));
+					audio_play_sound(snd_Jump, 10, false);
+				}
 				changeSprite(1, spr_Bond_Wall);
 			}
 			// mid-air attacking
@@ -176,6 +179,10 @@ switch (state) {
 		}
 		else {
 			// idle
+			if (sprite_index = spr_Bond_Air) {
+				audio_sound_pitch(snd_Jump, choose(0.8, 1.0, 1.2));
+				audio_play_sound(snd_Jump, 10, false);
+			}
 			if (hsp == 0) {
 				changeSprite(1, spr_Bond_Idle);
 			}
@@ -186,6 +193,12 @@ switch (state) {
 			// running
 			else {
 				changeSprite(1, spr_Bond_Run);
+			}
+			if (animationEnd()) {
+				if (sprite_index == spr_Bond_Run) {
+					audio_play_sound(choose(snd_Footsteps1, snd_Footsteps2, snd_Footsteps3), 4, false);
+					audio_sound_pitch(sound, 0.1);
+				}
 			}
 		}
 		break;
