@@ -1,5 +1,8 @@
 /// @description Basic movement
 
+if (invincible > 0) {
+	invincible--;
+}
 
 switch (state) {
 	

@@ -10,4 +10,6 @@ if (hitPoints < maxHP) {
 // draw hit flashing
 drawFlash();
 
+drawIFrame();
+
 

@@ -1,5 +1,10 @@
 /// @description Movement, Attacking, and Animation
-	
+
+// reduce the invincibles
+if (invincible > 0) {
+	invincible--;
+}
+
 if (state == "Move") {
 	#region setup calculations
 	// check key input
@@ -30,6 +35,7 @@ if (state == "Move") {
 		
 	// roll dodging
 	if (input.key_dash && onGround) {
+		invincible = 50;
 		image_index = 0;
 		state = "Roll";	
 	}
@@ -278,7 +284,7 @@ switch (state) {
 	#endregion
 	#region Hurt
 	case "Hurt":
-		knockback_state(spr_Verdali_Hurt, "Move")
+		knockback_state(spr_Verdali_Hurt, "Move");
 		break;
 	#endregion
 

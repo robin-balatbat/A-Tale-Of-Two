@@ -49,6 +49,7 @@ projSpeed = 15;
 // for getting hurt
 flash = 0;
 knockback_speed = 0;
+invincible = 20;
 
 // for using recovery items
 recoverCount = 0;

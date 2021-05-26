@@ -1,5 +1,9 @@
 /// @description Bond state movements and key inputs
 
+if (invincible > 0) {
+	invincible--;
+}
+
 // check key input
 key_changeForm = keyboard_check_pressed(ord("X"));
 
@@ -35,6 +39,7 @@ if (state == "Move") {
 
 	// dashing state
 	if (input.key_dash && (onWall == 0)) {
+		invincible = 50;
 		state = "Dash";
 	}
 	#endregion

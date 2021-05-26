@@ -2,3 +2,5 @@
 draw_self();
 
 drawFlash();
+
+drawIFrame();
