@@ -38,9 +38,11 @@ if (menu_x > gui_width + 150 && menu_committed != -1) {
 			
 			audio_play_sound(Battleground_Theme, 7, true);
 			audio_sound_gain(Battleground_Theme, 0.9, 2000);
+			
 			room_goto(rm_Battleground1);
 			break;
 		case 1:
+
 			instance_create_depth(x, y, -9999, obj_Fade);
 			room_goto(rm_Controls);
 			break;

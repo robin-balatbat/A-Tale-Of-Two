@@ -1,9 +1,6 @@
 /// @description Menu Setup
 
-// Audio
-if (!audio_is_playing(snd_MenuBackground1)) {
-	audio_play_sound(snd_MenuBackground1, 10, true);
-}
+audio_play_sound(snd_MenuBackground1, 10, true);
 
 // Menu
 
