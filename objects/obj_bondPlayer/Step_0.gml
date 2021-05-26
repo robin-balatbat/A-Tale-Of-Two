@@ -196,7 +196,7 @@ switch (state) {
 			}
 			if (animationEnd()) {
 				if (sprite_index == spr_Bond_Run) {
-					audio_play_sound(choose(snd_Footsteps1, snd_Footsteps2, snd_Footsteps3), 4, false);
+					var sound = audio_play_sound(choose(snd_Footsteps1, snd_Footsteps2, snd_Footsteps3), 4, false);
 					audio_sound_pitch(sound, 0.1);
 				}
 			}

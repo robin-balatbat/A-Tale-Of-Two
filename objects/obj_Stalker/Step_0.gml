@@ -8,8 +8,21 @@ event_inherited();
 switch (state) {
 	#region Attack
 	case "Attack":
-		var track = audio_play_sound(choose(snd_Stalker1, snd_Stalker2, snd_Stalker3), 1, false);
-		audio_sound_pitch(track, choose(0.8, 1, 1.2));
+		counter++;
+		var audioControl = choose(0, 1);
+		if (counter > room_speed * 5) {
+			switch (audioControl) {
+				case 0:
+					counter = 0;
+					break;
+				case 1: 
+					var track = audio_play_sound(choose(snd_Stalker1, snd_Stalker2, snd_Stalker3), 1, false);
+					audio_sound_pitch(track, choose(0.8, 1, 1.2));
+					counter = 0;
+					break;
+			}
+		}
+		
 		changeSprite(1, spr_Stalker_Attack);
 		// hitboxes
 		if (animationHitFrame(5)) {

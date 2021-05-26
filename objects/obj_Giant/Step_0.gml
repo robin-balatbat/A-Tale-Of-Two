@@ -8,8 +8,21 @@ event_inherited();
 switch (state) {
 	#region Attack1
 	case "Attack1":
-		var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
-		audio_sound_pitch(track, choose(0.8, 1, 1.2));
+		counter++;
+		var audioControl = choose(0, 1);
+		if (counter > room_speed * 5) {
+			switch (audioControl) {
+				case 0:
+					counter = 0;
+					break;
+				case 1: 
+					var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
+					audio_sound_pitch(track, choose(0.8, 1, 1.2));
+					counter = 0;
+					break;
+			}
+		}
+		
 		changeSprite(0.2, spr_Giant_Attack1);
 		// hitboxes
 		if (animationHitFrame(3)) {
@@ -19,8 +32,21 @@ switch (state) {
 	#endregion
 	#region Attack2
 	case "Attack2":
-		var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
-		audio_sound_pitch(track, choose(0.8, 1, 1.2));
+		counter++;
+		var audioControl = choose(0, 1);
+		if (counter > room_speed * 5) {
+			switch (audioControl) {
+				case 0:
+					counter = 0;
+					break;
+				case 1: 
+					var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
+					audio_sound_pitch(track, choose(0.8, 1, 1.2));
+					counter = 0;
+					break;
+			}
+		}
+
 		changeSprite(0.2, spr_Giant_Attack2);
 		// hitboxes
 		if (animationHitFrame(2)) {
@@ -30,8 +56,20 @@ switch (state) {
 	#endregion
 	#region Attack3
 	case "Attack3":
-		var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
-		audio_sound_pitch(track, choose(0.8, 1, 1.2));
+		counter++;
+		var audioControl = choose(0, 1);
+		if (counter > room_speed * 5) {
+			switch (audioControl) {
+				case 0:
+					counter = 0;
+					break;
+				case 1: 
+					var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
+					audio_sound_pitch(track, choose(0.8, 1, 1.2));
+					counter = 0;
+					break;
+			}
+		}
 		changeSprite(0.2, spr_Giant_Attack3);
 		// hitboxes
 		if (animationHitFrame(2)) {
@@ -45,6 +83,21 @@ switch (state) {
 	#endregion
 	#region Projectile
 	case "Projectile":
+		counter++;
+		var audioControl = choose(0, 1);
+		if (counter > room_speed * 5) {
+			switch (audioControl) {
+				case 0:
+					counter = 0;
+					break;
+				case 1: 
+					var track = audio_play_sound(choose(snd_GiantWalk1, snd_GiantWalk2), 1, false);
+					audio_sound_pitch(track, choose(0.8, 1, 1.2));
+					counter = 0;
+					break;
+			}
+		}
+		
 		changeSprite(0.2, spr_Giant_Projectile);
 		// hitboxes
 		if (animationHitFrame(3)) {
