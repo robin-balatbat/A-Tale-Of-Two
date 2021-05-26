@@ -3,6 +3,8 @@
 menu_x += (menu_x_target - menu_x) / menu_speed;
 
 if (menu_control) {
+	
+	// scroll through the choices
 	if (keyboard_check_pressed(vk_up)) {
 		menu_cursor++;
 		
@@ -26,6 +28,7 @@ if (menu_control) {
 	}
 }
 
+// Go to the correct space
 if (menu_x > gui_width + 150 && menu_committed != -1) {
 	switch (menu_committed) {
 		case 2: default: // transition to main game

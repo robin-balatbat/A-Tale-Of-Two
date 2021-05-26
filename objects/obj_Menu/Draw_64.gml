@@ -1,7 +1,7 @@
 /// @description Draw the menu
 
 draw_set_font(menu_font);
-draw_set_halign(fa_right);
+draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
 
 for (var i = 0; i < menu_items; i++) {
@@ -9,7 +9,7 @@ for (var i = 0; i < menu_items; i++) {
 	var txt = menu[i];
 	
 	if (menu_cursor == i) {
-		txt = string_insert("> ", txt, 0);
+		txt = string_insert("> ", txt, 0) + " <";
 		var col = c_yellow;
 	} else {
 		var col = c_white;
@@ -29,5 +29,5 @@ for (var i = 0; i < menu_items; i++) {
 }
 
 draw_set_color(c_white);
-draw_text(menu_x_target - 100, menu_y - (menu_itemheight * 7 * 1.5), "A Tale of Two");
-draw_text(menu_x_target - 70, menu_y - (menu_itemheight * 6 * 1.5), "By Robin Balatbat");
+draw_text(menu_x_target, menu_y - (menu_itemheight * 7 * 1.5), "A Tale of Two v0.0.1");
+draw_text(menu_x_target, menu_y - (menu_itemheight * 6 * 1.5), "By Robin Balatbat");

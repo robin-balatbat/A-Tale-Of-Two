@@ -38,11 +38,11 @@ healthbar_y = 20;
 magicbar_x = 20;
 magicbar_y = 64;
 
-coin_x = 133;
+coin_x = 20;
 coin_y = 135;
 
-lives_x = 126;
+lives_x = 20;
 lives_y = 160;
 
-potion_x = 17;
+potion_x = 20;
 potion_y = 155;

@@ -6,10 +6,10 @@ audio_play_sound(snd_MenuBackground1, 10, true);
 
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
-gui_margin = 32;
+gui_margin = 210;
 
 menu_x = gui_width;
-menu_y = gui_height - gui_margin;
+menu_y = gui_height - gui_margin * 0.5;
 menu_x_target = gui_width - gui_margin;
 menu_speed = 25;
 menu_font = Main_Font1;
