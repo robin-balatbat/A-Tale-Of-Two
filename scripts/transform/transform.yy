@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "States",
+    "path": "folders/Scripts/States.yy",
   },
   "resourceVersion": "1.0",
   "name": "transform",
