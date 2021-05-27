@@ -36,6 +36,7 @@ if (canDisplayText) {
 			dialog_next();
 			
 			if (dialog_end()) {
+				dialog_cleanup();
 				instance_destroy();
 			}
 		}

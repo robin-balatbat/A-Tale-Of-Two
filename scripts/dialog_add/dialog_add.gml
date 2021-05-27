@@ -16,6 +16,7 @@ function dialog_add(picture, sIndex, message){
 function dialog_cleanup() {
 	global.dialog_messages = -1;
 	global.dialog_index = -1;
+	global.scriptArray = -1;
 }
 
 // returns the height of the array
@@ -34,6 +35,8 @@ enum DIALOG {
 	SINDEX,
 	MESSAGE
 }
+
+global.scriptArray = -1;
 
 // get the sprite to use
 function dialog_get_picture() {
@@ -81,4 +84,13 @@ function draw_set(colorVal, alphaVal) {
 function draw_set_align(halignVar, valignVar) {
 	draw_set_halign(halignVar);
 	draw_set_valign(valignVar);
+}
+
+function dialog_create(scriptArray) {
+	dialog_init();
+	var i;
+	for (i = 0; i < array_length(scriptArray); i++) {
+		dialog_add(scriptArray[i][0], scriptArray[i][1], scriptArray[i][2]);
+	} 
+	dialog_reset();
 }
