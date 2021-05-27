@@ -164,7 +164,7 @@
   "inheritCreationOrder": true,
   "sequenceId": null,
   "roomSettings": {
-    "inheritRoomSettings": true,
+    "inheritRoomSettings": false,
     "Width": 1280,
     "Height": 720,
     "persistent": false,

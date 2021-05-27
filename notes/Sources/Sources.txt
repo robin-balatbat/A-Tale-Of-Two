@@ -1,4 +1,4 @@
-Code for Enemy Logic was inspired and/or modified from these sources:
+Code used in this project was inspired and/or modified from these sources:
 	- FriendlyCosmonaut Tutorials on Youtube
 	- HeartBeast Hack'N Slash Tutorial on Youtube
 	- Thomas Gervraud Platformer Tutorials on Youtube
@@ -7,7 +7,8 @@ Code for Enemy Logic was inspired and/or modified from these sources:
 	- North GameStudio on Youtube
 	- 1up Indie on Youtube
 	- Let's Learn This Together on Youtube
-	- GameMaker Casts
+	- GameMaker Casts Dialog System Tutorial on Youtube
 
 All Art Assets are original and were created in Piskel and/or Krita
-All Musical Assets are original and were created in bfxr.net and/or beepbox.co
+All Musical Assets are original and were created in
+bfxr.net, leshylabs sfxand/or beepbox.co

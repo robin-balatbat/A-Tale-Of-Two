@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"snd_Pickup1","path":"sounds/snd_Pickup1/snd_Pickup1.yy",},"order":0,},
+    {"id":{"name":"snd_ChaosDialog","path":"sounds/snd_ChaosDialog/snd_ChaosDialog.yy",},"order":8,},
     {"id":{"name":"getPlayerStateObj","path":"scripts/getPlayerStateObj/getPlayerStateObj.yy",},"order":4,},
     {"id":{"name":"obj_Stalker_Dead","path":"objects/obj_Stalker_Dead/obj_Stalker_Dead.yy",},"order":1,},
     {"id":{"name":"spr_Magic_Blast","path":"sprites/spr_Magic_Blast/spr_Magic_Blast.yy",},"order":0,},
@@ -26,6 +27,7 @@
     {"id":{"name":"spr_Giant_Hurt","path":"sprites/spr_Giant_Hurt/spr_Giant_Hurt.yy",},"order":6,},
     {"id":{"name":"spr_Bond_Walk","path":"sprites/spr_Bond_Walk/spr_Bond_Walk.yy",},"order":2,},
     {"id":{"name":"obj_testWall","path":"objects/obj_testWall/obj_testWall.yy",},"order":1,},
+    {"id":{"name":"snd_VerdaliDialog","path":"sounds/snd_VerdaliDialog/snd_VerdaliDialog.yy",},"order":9,},
     {"id":{"name":"spr_Bond_Attack_Mask","path":"sprites/spr_Bond_Attack_Mask/spr_Bond_Attack_Mask.yy",},"order":10,},
     {"id":{"name":"spr_MP_Bar","path":"sprites/spr_MP_Bar/spr_MP_Bar.yy",},"order":1,},
     {"id":{"name":"New_Mountain_BG","path":"sprites/New_Mountain_BG/New_Mountain_BG.yy",},"order":2,},

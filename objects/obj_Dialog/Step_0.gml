@@ -9,6 +9,14 @@ if (abs(position_bar_y - position_bar_y_end) <= 5) {
 if (canDisplayText) {
 	if (!is_waiting_for_keypress) {
 		if (delta_time mod (room_speed * 0.01) == 0) {
+			if (dialog_get_picture() == spr_Chaos_Icons) {
+				audio_play_sound(snd_ChaosDialog, 2, false);
+				audio_sound_pitch(snd_ChaosDialog, choose(0.8, 1.0, 1.2));
+			}
+			if (dialog_get_picture() == spr_Verdali_Icons) {
+				audio_play_sound(snd_VerdaliDialog, 2, false);
+				audio_sound_pitch(snd_VerdaliDialog, choose(0.6, 0.8, 1.0));
+			}
 			character_index++;
 		}
 		
@@ -21,6 +29,7 @@ if (canDisplayText) {
 		}
 	} else {
 		if (keyboard_check_released(vk_enter)) {
+			audio_play_sound(snd_Pickup1, 1, false);
 			is_waiting_for_keypress = false;
 			character_index = 0;
 			
