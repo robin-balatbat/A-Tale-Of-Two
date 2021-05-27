@@ -19,7 +19,7 @@ if (canDisplayText) {
 	
 	if (is_waiting_for_keypress) {
 		draw_set_align(fa_left, fa_middle);
-		char = "Press any key";
+		char = "Press Enter";
 		var text_length = string_width(char);
 		draw_text_transformed(display_get_gui_width() - text_length, display_get_gui_height() - 20, char, 0.75, 0.75, 0);
 	}

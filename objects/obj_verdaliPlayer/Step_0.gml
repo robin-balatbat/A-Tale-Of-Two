@@ -1,5 +1,9 @@
 /// @description Movement, Attacking, and Animation
 
+if (instance_exists(obj_Dialog)) {
+	exit;
+}
+
 // reduce the invincibles
 if (invincible > 0) {
 	invincible--;

@@ -12,7 +12,7 @@ if (canDisplayText) {
 			character_index++;
 		}
 		
-		if (keyboard_check_released(vk_anykey)) {
+		if (keyboard_check_released(vk_enter)) {
 			character_index = string_length(dialog_get_message());
 		}
 		
@@ -20,7 +20,7 @@ if (canDisplayText) {
 			is_waiting_for_keypress = true;
 		}
 	} else {
-		if (keyboard_check_released(vk_anykey)) {
+		if (keyboard_check_released(vk_enter)) {
 			is_waiting_for_keypress = false;
 			character_index = 0;
 			

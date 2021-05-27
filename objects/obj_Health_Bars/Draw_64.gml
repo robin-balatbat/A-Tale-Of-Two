@@ -48,6 +48,7 @@ draw_sprite_stretched(spr_MP_Bar, 0, magicbar_x, magicbar_y + 2, (mpToTrack/mpMa
 draw_sprite_stretched(spr_Bar_Border, 0, magicbar_x, magicbar_y, magicbar_width, healthbar_height + 6);
 
 draw_set_halign(fa_left);
+draw_set_valign(fa_bottom);
 
 // draw coins
 draw_set_font(Main_Font1);

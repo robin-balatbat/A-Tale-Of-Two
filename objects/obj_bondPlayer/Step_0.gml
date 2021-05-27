@@ -1,4 +1,8 @@
 /// @description Bond state movements and key inputs
+// if dialog is going, stop
+if (instance_exists(obj_Dialog)) {
+	exit;
+}
 
 if (invincible > 0) {
 	invincible--;
