@@ -21,6 +21,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Stalker","path":"objects/obj_Stalker/obj_Stalker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":800.0,"y":608.0,"resourceVersion":"1.0","name":"inst_656AA9C2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Stalker","path":"objects/obj_Stalker/obj_Stalker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":608.0,"resourceVersion":"1.0","name":"inst_472E9FF0","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_Stalker","path":"objects/obj_Stalker/obj_Stalker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":608.0,"resourceVersion":"1.0","name":"inst_5186D1BC","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_DialogCollision","path":"objects/obj_DialogCollision/obj_DialogCollision.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":9.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":0.0,"resourceVersion":"1.0","name":"inst_62C45CA9","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Projectiles","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Hitbox","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
@@ -106,6 +107,7 @@
     {"name":"inst_656AA9C2","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
     {"name":"inst_472E9FF0","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
     {"name":"inst_5186D1BC","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
+    {"name":"inst_62C45CA9","path":"rooms/rm_Battleground_Boss/rm_Battleground_Boss.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

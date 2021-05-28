@@ -2,10 +2,12 @@
 
 if (instance_exists(obj_Dialog)) {
 	changeSprite(0.2, spr_Verdali_Chaos);
-	if (image_index == 5) {
-		image_speed = 0;
-	}
 	exit;
+}
+
+// bring up the instructions
+if (input.key_instruction) {
+	instance_create_layer(x, y, layer, obj_Instructions);
 }
 
 // reduce the invincibles

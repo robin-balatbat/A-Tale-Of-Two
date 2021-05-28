@@ -1,7 +1,13 @@
 /// @description Bond state movements and key inputs
 // if dialog is going, stop
 if (instance_exists(obj_Dialog)) {
+	changeSprite(0.2, spr_Bond_Idle);
 	exit;
+}
+
+// bring up the instructions
+if (input.key_instruction) {
+	instance_create_layer(x, y, layer, obj_Instructions);
 }
 
 if (invincible > 0) {
