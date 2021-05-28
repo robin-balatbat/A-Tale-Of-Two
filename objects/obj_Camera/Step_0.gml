@@ -1,5 +1,6 @@
 /// @description Camera step event
 
+// get current object to follow
 switch (global.current_state) {
 	
 	case PlayerState.Verdali:

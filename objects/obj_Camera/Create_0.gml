@@ -1,5 +1,8 @@
 /// @description Set up camera
+// randomize for game purposes
 randomize();
+
+// find the current event to follow
 if (!instance_exists(obj_verdaliPlayer)) {
 	instance_create_layer(obj_Respawn.x, obj_Respawn.y, "Player", obj_verdaliPlayer);
 }
