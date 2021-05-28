@@ -1,6 +1,10 @@
 /// @description Movement, Attacking, and Animation
 
 if (instance_exists(obj_Dialog)) {
+	changeSprite(0.2, spr_Verdali_Chaos);
+	if (image_index == 5) {
+		image_speed = 0;
+	}
 	exit;
 }
 
