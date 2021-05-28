@@ -21,7 +21,7 @@ with (other) {
 				global.bond_mp += 5;
 			}
 		}
-		invincible = 30;
+		invincible = 5;
 	}
 	
 }
