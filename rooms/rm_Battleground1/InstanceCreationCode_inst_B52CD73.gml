@@ -25,4 +25,5 @@ global.scriptArray = [
 [spr_Chaos_Icons, 0, "be my guest."],
 [spr_Verdali_Icons, 1, "*sigh*"],
 [spr_Verdali_Icons, 0, "Fine. Let's get going."],
+[spr_Pixel, 0, "*Your goal: Escape the Scarred Battlegrounds*"],
 ];
